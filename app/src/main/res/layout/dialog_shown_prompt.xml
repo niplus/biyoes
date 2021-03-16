@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/layout_bg_style_white_no_line_circular"
+       >
+       <ImageView
+           android:id="@+id/iv_clear"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@mipmap/clear_btn"
+           android:layout_alignParentRight="true"
+           android:layout_marginTop="15dp"
+           android:layout_marginRight="15dp"
+           android:padding="5dp"
+           />
+       <TextView
+           android:id="@+id/tv_title"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/indication_of"
+           android:textColor="@color/colorText1"
+           android:layout_below="@id/iv_clear"
+           android:textSize="17sp"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="20dp"
+           />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/tv_title"
+           android:text="@string/upload_pic_tips"
+           android:textColor="@color/colorText1"
+           android:layout_marginLeft="20dp"
+           android:textSize="15sp"
+           android:layout_marginBottom="50dp"
+           android:lineSpacingExtra="5dp"
+           android:layout_marginTop="5dp"
+           />
+   </RelativeLayout>
+
+
+</LinearLayout>

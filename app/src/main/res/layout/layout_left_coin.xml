@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="227dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_market_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="65dp"
+        android:drawableLeft="@mipmap/icon_market_left"
+        android:drawablePadding="17dp"
+        android:text="@string/coin_transfer"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/market_right_tab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:tl_textSelectColor="@color/login_yellow"
+            app:tl_textUnselectColor="@color/black">
+
+        </com.flyco.tablayout.CommonTabLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edit_market_right"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="7dp"
+        android:background="#EBF1F9"
+        android:gravity="center"
+        android:hint="请输入关键字搜索"
+        android:maxLines="1"
+        android:textSize="10sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_market_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" />
+</LinearLayout>

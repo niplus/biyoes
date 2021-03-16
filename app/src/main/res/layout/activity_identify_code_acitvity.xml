@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_white"
+    tools:context="com.biyoex.app.common.activity.IdentifyCodeAcitvity">
+
+    <include layout="@layout/layout_newtitle_bar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/text_normal"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_title"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="@color/text_middle_light"
+        android:id="@+id/tv_message"
+        android:layout_marginTop="20dp"/>
+
+    <com.biyoex.app.common.widget.CodeInputView
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp"
+        android:id="@+id/code_input"
+        android:layout_gravity="center_horizontal">
+
+    </com.biyoex.app.common.widget.CodeInputView>
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#393A3F</color>
+
+    <color name="tradingBar">#062d5d</color>
+
+    <color name="color_coin_poppw">#101131</color>
+    <!--白色-->
+    <color name="colorWhite">#1f1c19</color>
+    <color name="color_mine_top">#222223</color>
+    <!--黑色-->
+    <color name="colorBlack">#ffffff</color>
+    <color name="color_search_edit">#4DBBBBBB</color>
+    <color name="color_home_list_hint">#BBBBBB</color>
+
+    <color name="mine_top_bg_color">#33FFFFFF</color>
+    <color name="color_select_coin">#202020</color>
+
+    <color name="green">#29D3AD</color>
+    <!--按压后的浅蓝色-->
+    <!--提示字体颜色-->
+    <!--导航栏字体选中颜色-->
+
+    <color name="commonBlue">#358dfa</color>
+    <!--1级字体颜色-->
+    <color name="colorText1">#ffffff</color>
+    <!--2级字体颜色-->
+    <!--3级字体颜色-->
+    <color name="colorText3">#C8C8C8</color>
+    <!--4级字体颜色-->
+    <color name="colorText4">#999999</color>
+    <!--常用黑色字体-->
+    <color name="textBlack">#999999</color>
+    <!--线-->
+    <!--底层灰色-->
+    <color name="colorBottomGray">#000000</color>
+
+    <color name="colorBottomGrayF8">#F8F8F8</color>
+    <!--未选中蓝-->
+    <color name="colorUncheckedWathet">#A3C2CC</color>
+
+    <color name="color_purple">#7986BF</color>
+
+    <color name="btn_normal">#F6FBFF</color>
+    <color name="dark_line">#ebebe9</color>
+    <!--我的页面主题颜色-->
+    <color name="my_theme">#ecb717</color>
+    <color name="rushbuy">#FCD768</color>
+    <!--登录字体 -->
+    <color name="login_yellow">#E8CC00</color>
+    <!-- QRCode scanner color begin -->
+    <color name="viewfinder_mask">#FC000000</color>
+    <color name="result_view">#B0000000</color>
+    <color name="viewfinder_frame">#90FFFFFF</color>
+    <color name="result_point_color">#C0FFFF00</color>
+    <color name="laser_color">#0F0</color>
+    <color name="corner_color">#00FF00</color>
+    <color name="progress_color">#F6B37F</color>
+    <color name="color_pink">#33F8CDBA</color>
+    <color name="color_bg_market_price">#909090</color>
+    <color name="color_bg_item_property_btn">#FFCDB7</color>
+    <color name="color_tab_selector_popu">#4B9BF5</color>
+    <color name="color_tab_normal_popu">#0B1B36</color>
+
+    <color name="search_bg">#313030</color>
+    <color name="percenttext_color">#6B99AB</color>
+    <color name="percentbackground">#E5ECF4</color>
+    <!--夜间模式之后定义-->
+    <color name="white">#fff</color>
+
+    <color name="price_green">#00C69E</color>
+    <color name="price_red">#f44b5d</color>
+    <color name="price_bg_green">#CFF8F0</color>
+    <color name="price_bg_red">#FFDEDE</color>
+    <color name="recharge_bg_red">#DA5350</color>
+    <color name="color_home_tab">#F9611E</color>
+    <color name="marekt_bg_alpha_red">#0DF80051</color>
+    <color name="market_bg_alpha_green">#0D03FCCA</color>
+    <!--白天模式的-->
+
+    <!--以下是夜间模式需要切换的-->
+    <!--背景色-->
+    <color name="background_gray">#F5F5F5</color>
+    <color name="background_white">#000</color>
+    <!--通用字体颜色-->
+    <color name="text_normal">#B9B7B7</color>
+    <color name="text_middle_light">#666666</color>
+    <color name="text_weak_light">#999999</color>
+    <color name="text_home_light">#bbbbbb</color>
+    <color name="text_item_sold">#aaaaaa</color>
+    <color name="color_gray_f3">#222223</color>
+    <!--线-->
+    <color name="line_color">#1A979797</color>
+    <color name="trade_price_control">#f5f5f5</color>
+    <color name="line_eee">#1A979797</color>
+    <color name="color_bg_item_market_entrust">#DCDCDC</color>
+    <color name="home_bg_color">#50E7E7E7</color>
+    <!--主题色，工具条，状态栏-->
+    <color name="colorAccent">#393A3F</color>
+    <!--不是通常白天对黑夜的颜色的-->
+    <color name="text_black_to_middle">#333333</color>
+    <color name="text_black_to_weak">#CCC9C9</color>
+    <color name="text_white_to_normal">#fff</color>
+    <color name="white_to_deep_blue">#fff</color>
+    <color name="text_middle_to_normal">#666666</color>
+    <color name="blue_to_weak">#358dfa</color>
+    <color name="text_weak_to_noraml">#999999</color>
+    <color name="text_weak_to_middle">#999999</color>
+    <color name="gray_to_black">#999999</color>
+    <color name="text_aaa_color">#AAAAAA</color>
+    <color name="color_home_ddd">#DDDDDD</color>
+    <color name="color_home_tab_normal">#80FFFFFF</color>
+    <color name="color_market_tab_bg">#EBF1F9</color>
+    <color name="color_market_tab_bg_select">#6B99AB</color>
+
+</resources>

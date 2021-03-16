@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:gravity="center"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:id="@+id/tv_rank_item_my_rank"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+    android:layout_weight="0.5" />
+    <TextView
+        android:id="@+id/tv_sum_money_item_my_rank"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_weight="0.5"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/tv_account_item_my_rank"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+    <TextView
+        android:id="@+id/tv_perpor_num_item_my_rank"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="0.5" />
+
+
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home.activity.PosInternalTransferActivity">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/layout_newtitle_bar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#50dddddd" />
+
+    <LinearLayout
+        android:id="@+id/layout_choose_transfer_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="10dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_internal_account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="主账号名称"
+            android:textSize="13sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:textColor="@color/colorText4"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_main_account_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:textColor="@color/mine_top_bg_color"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:src="@mipmap/pos_pull_down"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#50dddddd" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        tools:ignore="RtlSymmetry">
+
+        <EditText
+            android:id="@+id/edit_transfer_inputNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:inputType="numberDecimal"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorText4"
+            android:textSize="13sp"
+            tools:ignore="Autofill,HardcodedText,LabelFor" />
+
+        <TextView
+            android:id="@+id/tv_transfer_all_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="全部"
+            android:textSize="14sp"
+            android:textColor="@color/color_F96868"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:text="*仅支持主账号和子账号之间转账；转账手续费为0；\n挂单中和pos挖矿中的币不可转账。 "
+        android:textColor="@color/color_FA4747"
+        android:textSize="11sp"
+        tools:ignore="HardcodedText,SmallSp" />
+
+    <TextView
+        android:id="@+id/tv_determine_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:layout_marginTop="88dp"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:background="@drawable/bg_red_orange_radius_5"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

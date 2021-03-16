@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/bg_white_radius_10"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/mine_top_bg_color"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="25dp"
+        android:textStyle="bold"
+        android:text="VB已支持USDT多链充提"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/mine_top_bg_color"
+        android:text="USDT-TRC20 (USDT-TRON) 是\nTether公司基于TRON网络的TRC20\n协议发行的USDT，充提币通过TRON\n网络进行。\n\nUSDT-ERC20是Tether公司基于ETH\n网络的ERC20协议发行的USDT，充提\n币通过ETH网络进行。 "
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#FFE5716B"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:textStyle="bold"
+        android:text="注意:充提币时请务必核对USDT类型"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

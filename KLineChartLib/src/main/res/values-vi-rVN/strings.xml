@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">KLineChartLib</string>
+    <string name="kline_time">Thời gian</string>
+    <string name="buy_max_price">Mua giá:</string>
+    <string name="max_price">Giá cao nhất:</string>
+    <string name="min_price">Giá thấp nhất:</string>
+    <string name="sell_price">Bán giá:</string>
+    <string name="up_down">Tăng và giảm</string>
+    <string name="up_and_down_number">Lên xuống</string>
+    <string name="number">Số lượng:</string>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">KLineChartLib</string>
+    <string name="kline_time">시간</string>
+    <string name="buy_max_price">1가로 사다:</string>
+    <string name="max_price">최고가:</string>
+    <string name="min_price">최저가:</string>
+    <string name="sell_price">1가로 팔다:</string>
+    <string name="up_down">상승하한액</string>
+    <string name="up_and_down_number">상하 하락</string>
+    <string name="number">수량:</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".home.activity.PosRecordAcitivity">
+    <include layout="@layout/layout_title_bar"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_pos_search"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:hint="搜索币种"
+        android:id="@+id/edit_search_coin"
+        android:inputType="textEmailAddress"
+        android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:textSize="13sp"
+        android:paddingEnd="15dp"
+        android:drawableEnd="@mipmap/icon_search"
+        android:paddingStart="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="30dp"/>
+    <include layout="@layout/base_refresh_recyclerview"/>
+</LinearLayout>

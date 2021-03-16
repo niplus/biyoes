@@ -1,0 +1,11 @@
+<resources>
+<string name="app_name">KLineChartLib</string>
+<string name="kline_time">time</string>
+<string name="buy_max_price">Recently Buy price:</string>
+<string name="max_price"> High price:</string>
+<string name="min_price">lowest price:</string>
+<string name="sell_price">Recently Sell price:</string>
+<string name="up_down">up down</string>
+<string name="up_and_down_number">up down %</string>
+<string name="number">bumber:</string>
+</resources>

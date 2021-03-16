@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/layout_newtitle_bar" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/upload_certificate"
+                    android:textSize="25sp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/textBlack"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/two_certificate"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="28dp"
+                    android:textColor="@color/textBlack"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_margin="16dp"
+                    android:src="@mipmap/icon_card"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_positive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/card_carams"
+                    android:textColor="@color/colorText1"
+                    android:textSize="10dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/iv_positive"
+                        android:layout_width="189dp"
+                        android:layout_height="121dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/front" />
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_other_side"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="16dp"
+                    android:text="@string/card_id_back_carams"
+                    android:textColor="@color/colorText1"
+                    android:textSize="10dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/iv_other_side"
+                        android:layout_width="189dp"
+                        android:layout_height="121dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/back" />
+
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="18dp"
+                    android:text="@string/hand_card_id_carams"
+                    android:textColor="@color/colorText1"
+                    android:visibility="gone"
+                    android:textSize="10dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_hold_positive"
+                        android:layout_width="189dp"
+                        android:layout_height="121dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/hand" />
+
+
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/certificate_hint"
+                    android:layout_margin="16dp"
+                    android:textColor="@color/colorText1"
+                    android:textSize="10dp" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="140dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="43dp"
+                    app:cardCornerRadius="22.5dp">
+
+                    <Button
+                        android:id="@+id/btn_confirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/my_theme"
+                        android:text="@string/submit"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:text="@string/loading_success"
+                    android:textColor="@color/colorText1"
+                    android:textSize="11sp" />
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".my.activity.ForGetPwActivity">
+
+    <TextView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/cancel"
+        android:textColor="@color/text_bbb_color"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="@string/forget_password"
+        android:textColor="@color/textBlack"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/iv_back"
+        app:layout_constraintTop_toBottomOf="@+id/iv_back" />
+
+    <EditText
+        android:id="@+id/et_account"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="45dp"
+        android:background="@null"
+        android:hint="@string/account"
+        android:inputType="text"
+        android:textColorHint="@color/text_bbb_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+    <View
+        android:id="@+id/view15"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_home_ddd"
+        app:layout_constraintTop_toBottomOf="@+id/et_account" />
+
+    <EditText
+        android:id="@+id/ed_code"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="35dp"
+        android:background="@null"
+        android:hint="@string/certify_code"
+        android:inputType="number"
+        android:textColorHint="@color/text_bbb_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/view15" />
+
+    <View
+        android:id="@+id/view16"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_home_ddd"
+        app:layout_constraintTop_toBottomOf="@+id/ed_code"
+        tools:layout_editor_absoluteX="30dp" />
+
+    <Button
+        android:id="@+id/tv_send_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="@string/send_certify_code"
+        android:textColor="@color/commonBlue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ed_code"
+        app:layout_constraintEnd_toEndOf="@+id/ed_code"
+        app:layout_constraintTop_toTopOf="@+id/ed_code" />
+
+    <EditText
+        android:id="@+id/edit_new_pw"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        android:background="@null"
+        android:hint="@string/new_password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/text_bbb_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_send_code" />
+
+    <ImageView
+        android:id="@+id/iv_new_eyes"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="center"
+        android:src="@mipmap/e_close"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_new_pw"
+        app:layout_constraintEnd_toEndOf="@+id/edit_new_pw"
+        app:layout_constraintTop_toTopOf="@+id/edit_new_pw" />
+
+    <View
+        android:id="@+id/view17"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_home_ddd"
+        app:layout_constraintTop_toBottomOf="@+id/edit_new_pw" />
+
+    <EditText
+        android:id="@+id/ed_again_pw"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="35dp"
+        android:background="@null"
+        android:hint="@string/repeat_password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/text_bbb_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/view17" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_home_ddd"
+        app:layout_constraintTop_toBottomOf="@id/ed_again_pw" />
+
+    <ImageView
+        android:id="@+id/iv_again_eves"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="center"
+        android:src="@mipmap/e_close"
+        app:layout_constraintBottom_toBottomOf="@+id/ed_again_pw"
+        app:layout_constraintEnd_toEndOf="@+id/ed_again_pw"
+        app:layout_constraintTop_toTopOf="@+id/ed_again_pw" />
+
+
+    <TextView
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginTop="39dp"
+        android:background="@drawable/bg_login_btn"
+        android:gravity="center"
+        android:text="@string/sure"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_again_eves"
+        tools:layout_editor_absoluteX="30dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

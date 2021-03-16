@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    >
+   <include layout="@layout/layout_newtitle_bar"/>
+
+    <ProgressBar
+        android:id="@+id/pb_details"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+         />
+    <com.biyoex.app.common.utils.LollipopFixedWebView
+        android:id="@+id/wv_details"
+        android:background="@color/background_white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"/>
+
+</LinearLayout>

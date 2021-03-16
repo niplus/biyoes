@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">klinelib</string>
+    <string name="loading">无数据</string>
+
+
+    <string name="price">价格</string>
+    <string name="change_rate">涨跌幅</string>
+    <string name="volume">成交量</string>
+
+    <string name="open_price">买一价</string>
+    <string name="close_price">卖一价</string>
+    <string name="high_price">最高价</string>
+    <string name="low_price">最低价</string>
+
+    <string name="time">时 间</string>
+</resources>

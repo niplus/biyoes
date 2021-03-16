@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <include layout="@layout/layout_trading_buy" android:id="@+id/layout_buy" />
+            <include layout="@layout/layout_trading_sell" android:id="@+id/layout_sell" android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="15dp">
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@color/price_green"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/word_buy"
+                    android:textSize="10sp"
+                    android:textColor="@color/text_middle_light"
+                    android:layout_marginLeft="5dp"/>
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@color/price_red"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/word_sell"
+                    android:textSize="10sp"
+                    android:textColor="@color/text_middle_light"
+                    android:layout_marginLeft="5dp"/>
+
+            </LinearLayout>
+
+            <com.biyoex.app.common.widget.DepthView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:id="@+id/depthView"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/handicap"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_weak_light"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/rate"
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_weak_light"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/volume"
+                    android:textSize="12sp"
+                    android:gravity="right"
+                    android:textColor="@color/text_weak_light"/>
+
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:id="@+id/rv_sell"
+                android:overScrollMode="never">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/price_green"
+                android:layout_marginTop="15dp"
+                android:id="@+id/tv_current_price"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_price_value"
+                android:textSize="11sp"
+                android:textColor="@color/text_weak_light"
+                android:layout_gravity="center_vertical"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_marginTop="15dp"
+                android:overScrollMode="never"
+                android:id="@+id/rv_buy">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/new_deal"
+        android:textSize="16sp"
+        android:textColor="@color/text_normal"
+        android:gravity="center_vertical"
+        android:background="@color/background_white"
+        android:paddingLeft="11dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:background="@color/background_white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/text_weak_light"
+            android:textSize="10sp"
+            android:text="@string/time"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/text_weak_light"
+            android:text="@string/buy_sell"
+            android:textSize="10sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_price_label"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/text_weak_light"
+            android:textSize="10sp" />
+        <TextView
+            android:id="@+id/tv_volume_label"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/text_weak_light"
+            android:layout_marginRight="15dp"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+    <!--放入交易历史-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView"
+        android:background="@color/background_white">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>

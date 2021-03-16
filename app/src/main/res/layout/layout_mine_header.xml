@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/img_mine_header"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bg_mine_header"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/bg_mine_hander"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_user_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="60dp"
+        android:src="@mipmap/icon_mine_src"
+        app:layout_constraintLeft_toLeftOf="@id/bg_mine_header"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_mine_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/iv_user_logo"
+        app:layout_constraintTop_toTopOf="@+id/bg_mine_header">
+
+        <com.biyoex.app.common.widget.AutoTextSizeTextView
+            android:id="@+id/tv_user_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/regist_login"
+            android:textColor="@color/colorBlack"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_user_uid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_app"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_header_share"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:scaleType="center"
+        android:src="@mipmap/icon_share"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@id/bg_mine_header"
+        app:layout_constraintTop_toTopOf="@id/bg_mine_header" />
+
+
+    <TextView
+        android:id="@+id/tv_security"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:drawableTop="@mipmap/icon_security"
+        android:drawablePadding="8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/security_center"
+        android:textColor="@color/colorBlack"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/bg_mine_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cardid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:drawableTop="@mipmap/icon_cardid"
+        android:drawablePadding="8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/certification"
+        android:textColor="@color/colorBlack"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/bg_mine_header"
+        app:layout_constraintLeft_toLeftOf="@id/bg_mine_header"
+        app:layout_constraintRight_toLeftOf="@id/tv_security" />
+
+
+    <TextView
+        android:id="@+id/tv_share_retrun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:drawableTop="@mipmap/icon_share_retrun"
+        android:drawablePadding="8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/invite_retrun"
+        android:textColor="@color/colorBlack"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/bg_mine_header"
+        app:layout_constraintLeft_toRightOf="@id/tv_security"
+        app:layout_constraintRight_toRightOf="@id/bg_mine_header" />
+
+    <TextView
+        android:id="@+id/tv_night"
+        android:layout_width="wrap_content"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:layout_height="20dp"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:background="@drawable/bg_mine_top_night"
+        android:drawableEnd="@drawable/circle_black"
+        android:gravity="center"
+        android:paddingRight="5dp"
+        android:text="@string/night"
+        android:textColor="@color/mine_top_bg_color"
+        android:textSize="10sp"
+        app:layout_constraintRight_toRightOf="@id/bg_mine_header"
+        app:layout_constraintTop_toTopOf="@id/bg_mine_header" />
+</androidx.constraintlayout.widget.ConstraintLayout>

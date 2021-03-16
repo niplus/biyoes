@@ -1,0 +1,56 @@
+-----------------------Tinker patch begin-----------------------
+configuration: 
+oldApk:/Users/zhaoweiguo/StudioProjects/VBT-android/app/build/bakApk/app-1.2.7-1210-17-51-45/release//app-release.apk
+newApk:/Users/zhaoweiguo/StudioProjects/VBT-android/app/build/outputs/apk/release/app-release.apk
+outputFolder:/Users/zhaoweiguo/StudioProjects/VBT-android/app/build/outputs/apk/tinkerPatch/release
+isIgnoreWarning:false
+isProtectedApp:false
+7-ZipPath:/Users/zhaoweiguo/.gradle/caches/modules-2/files-2.1/com.tencent.mm/SevenZip/1.1.10/cc390e6c704b74496d9ba0e9b46d2cf8a2a96b84/SevenZip-1.1.10-osx-x86_64.exe
+useSignAPk:true
+package meta fields: 
+dex configs: 
+dexMode: jar
+dexPattern:classes.*\.dex
+dex loader:com.tinkerpatch.sdk.loader.TinkerPatchReflectApplication
+dex loader:com.tencent.tinker.loader.*
+lib configs: 
+libPattern:lib/.*/.*\.so
+resource configs: 
+resPattern:r/.*
+resPattern:AndroidManifest\.xml
+resPattern:assets/.*
+resPattern:res/.*
+resPattern:resources\.arsc
+largeModSize:100kb
+useApplyResource:true
+
+Analyze old and new apk files:
+old apk: app-release.apk, size=17840641, md5=e0842c3f5f5ad6d8ccbb0db3dd5f98e7
+new apk: app-release.apk, size=17840682, md5=6a9575d60cc9ef132c28b0d789f545a4
+
+Manifest has no changes, skip rest decode works.
+UnZipping apk to /Users/zhaoweiguo/StudioProjects/VBT-android/app/build/outputs/apk/tinkerPatch/release/app-release-old
+UnZipping apk to /Users/zhaoweiguo/StudioProjects/VBT-android/app/build/outputs/apk/tinkerPatch/release/app-release-new
+Check for loader classes in dex: classes2.dex
+Check for loader classes in dex: classes.dex
+
+Gen classes.dex patch file:/Users/zhaoweiguo/StudioProjects/VBT-android/app/build/outputs/apk/tinkerPatch/release/tinker_result/classes.dex, size:1057, md5:ceb6b030cf5f3bfcdddaffc910370d50
+Verifying if patched new dex is logically the same as original new dex: app-release-new/classes.dex ...
+
+Gen classes.dex for dalvik full dex file:/Users/zhaoweiguo/StudioProjects/VBT-android/app/build/outputs/apk/tinkerPatch/release/tempPatchedDexes/classes.dex, size:8944948, md5:9491a64b65e5146d91b1cf9591311871
+DexDecoder:write meta file data: classes2.dex,,0,8a933cbb8cb5bca8d943a0cbe82dfbe6,0,1007428676,1007428676,jar
+DexDecoder:write meta file data: classes.dex,,9491a64b65e5146d91b1cf9591311871,9491a64b65e5146d91b1cf9591311871,ceb6b030cf5f3bfcdddaffc910370d50,3605273953,2052937740,jar
+
+Add test install result dex: /Users/zhaoweiguo/StudioProjects/VBT-android/app/build/outputs/apk/tinkerPatch/release/tinker_result/test.dex, size:584
+DexDecoder:write test dex meta file data: test.dex,,56900442eb5b7e1de45449d0685e6e00,56900442eb5b7e1de45449d0685e6e00,0,0,0,jar
+Generate unsigned apk: patch_unsigned.apk
+Signing apk: patch_signed.apk
+Signing key algorithm is SHA1withRSA
+Try use 7za to compress the patch file: patch_signed_7zip.apk, will cost much more time
+Current 7za path:/Users/zhaoweiguo/.gradle/caches/modules-2/files-2.1/com.tencent.mm/SevenZip/1.1.10/cc390e6c704b74496d9ba0e9b46d2cf8a2a96b84/SevenZip-1.1.10-osx-x86_64.exe
+Result: final signed patch result: /Users/zhaoweiguo/StudioProjects/VBT-android/app/build/outputs/apk/tinkerPatch/release/patch_signed.apk, size=3570
+Result: final signed with 7zip patch result: /Users/zhaoweiguo/StudioProjects/VBT-android/app/build/outputs/apk/tinkerPatch/release/patch_signed_7zip.apk, size=3943
+Warning: patch_signed_7zip.apk is bigger than patch_signed.apk 373 byte, you should choose patch_signed.apk at these time!
+Tinker patch done, total time cost: 5.967000s
+Tinker patch done, you can go to file to find the output /Users/zhaoweiguo/StudioProjects/VBT-android/app/build/outputs/apk/tinkerPatch/release
+-----------------------Tinker patch end-------------------------

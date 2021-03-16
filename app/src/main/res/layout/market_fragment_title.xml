@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tv_market_coin_name"
+        android:layout_width="wrap_content"
+        android:padding="13dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@mipmap/icon_market_left"
+        android:drawablePadding="20dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/tv_fupanddown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_toRightOf="@id/tv_market_coin_name"
+        android:layout_centerVertical="true"
+        android:textSize="10sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/price_red"
+            android:background="@drawable/bg_market_br"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:text="BURN"
+            android:layout_marginStart="5dp"
+            android:id="@+id/tv_isburn"
+            android:layout_toRightOf="@id/tv_fupanddown"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/iv_market_rank"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="center"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/icon_market_rank" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:id="@+id/iv_market_fons"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/iv_market_rank"
+        android:src="@mipmap/icon_mine_fons" />
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".my.activity.InviteActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/invite_head_bg" />
+
+                <include layout="@layout/layout_title_bar" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/qr_code_img"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="27dp"
+                android:layout_weight="5"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerInside" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="127dp"
+                    android:layout_height="39dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@color/my_theme">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="保存二维码"
+                        android:background="@null"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="127dp"
+                    android:layout_height="39dp"
+                    android:layout_marginLeft="36dp"
+                    app:cardBackgroundColor="@color/my_theme"
+                    app:cardCornerRadius="10dp">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="分享二维码"
+                        android:background="@null"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp" />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

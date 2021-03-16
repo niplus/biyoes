@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">klinelib</string>
+    <string name="loading">데이터 없음</string>
+
+
+    <string name="price">가격</string>
+    <string name="change_rate">변동율</string>
+    <string name="volume">거래량</string>
+
+    <string name="open_price">매입1</string>
+    <string name="close_price">매도1</string>
+    <string name="high_price">최고가</string>
+    <string name="low_price">최저가</string>
+    <string name="time">time</string>
+</resources>

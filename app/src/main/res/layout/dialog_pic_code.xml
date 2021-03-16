@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bg_style_white_no_line_circular">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="请输入验证码"
+            android:textColor="@color/textBlack"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginTop="30dp">
+            
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:hint="输入图片验证码"
+                android:background="@color/colorBottomGray"
+                android:id="@+id/edt_code"
+                android:textColor="@color/textBlack"
+                android:singleLine="true"
+                android:inputType="text"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="9dp"
+                android:paddingLeft="11dp"/>
+            
+            <ImageView
+                android:id="@+id/iv_pic_code"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:layout_marginRight="15dp"
+                android:layout_below="@id/tv_title"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color"
+            android:layout_below="@id/ll_content"
+            android:layout_marginTop="35dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/ll_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="5dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="取消"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:textColor="@color/colorText1"
+                android:background="@drawable/layout_press_style_white"
+                />
+            <View
+                android:layout_width="1px"
+                android:layout_height="30dp"
+                android:background="@color/line_color"
+                />
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="确认"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:textColor="@color/commonBlue"
+                android:background="@drawable/layout_press_style_white"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

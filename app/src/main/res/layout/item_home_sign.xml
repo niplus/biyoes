@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="81dp"
+    android:background="@drawable/bg_item_home_sign"
+    android:gravity="center"
+    android:textColor="@color/color_sign_color"
+    android:textSize="12sp"
+    android:id="@+id/tv_item_name"
+    android:layout_height="81dp">
+</TextView>

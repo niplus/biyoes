@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BaseView">
+        <attr name="axisColor" format="color"/>
+        <attr name="gridColor" format="color"/>
+        <attr name="increaseColor" format="color"/>
+        <attr name="decreaseColor" format="color"/>
+        <attr name="highlightColor" format="color"/>
+    </declare-styleable>
+</resources>

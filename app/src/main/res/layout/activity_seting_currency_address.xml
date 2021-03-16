@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/layout_newtitle_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_white"
+        android:paddingTop="30dp">
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/withdraw_address"
+            android:textColor="@color/text_black_to_middle"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/ed_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/tv_address"
+            android:background="@null"
+            android:minLines="4"
+            android:gravity="top"
+            android:hint="@string/withdraw_address"
+            android:textColor="@color/text_normal"
+            android:textColorHint="@color/text_weak_light"
+            android:textSize="13sp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_qr"
+            android:layout_marginRight="15dp"
+            android:id="@+id/iv_scan_qr"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/background_white">
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/address_alias"
+            android:textColor="@color/text_black_to_middle"
+            android:textSize="15sp" />
+
+        <com.biyoex.app.common.widget.ClearEditText
+            android:id="@+id/ed_label"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="15dp"
+            android:background="@null"
+            android:hint="@string/address_alias"
+            android:textColor="@color/text_normal"
+            android:textColorHint="@color/text_weak_light"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/background_white">
+
+        <TextView
+            android:id="@+id/tv_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/transfer_label"
+            android:textColor="@color/text_black_to_middle"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/ed_remark"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="90dp"
+            android:background="@null"
+            android:hint="@string/can_empty_not_support_chinese"
+            android:textColor="@color/text_normal"
+            android:textColorHint="@color/text_weak_light"
+            android:textSize="13sp"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="35dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/my_theme"
+        android:text="@string/confirm"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp" />
+</LinearLayout>

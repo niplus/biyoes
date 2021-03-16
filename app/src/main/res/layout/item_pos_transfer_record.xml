@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_PosTransfer_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:text="转入"
+            android:textColor="@color/textBlack"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_PosTransfer_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:text="12345678"
+            android:textColor="@color/textBlack"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_PosTransfer_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textSize="12sp"
+            android:text="-3567.22"
+            android:gravity="center"
+            android:textColor="@color/textBlack"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_PosTransfer_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:textSize="12sp"
+            android:text="2020/07/22 10:00 "
+            android:gravity="center"
+            android:textColor="@color/textBlack"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chart_0.5dp"
+        android:background="@color/bg_eb"/>
+
+</LinearLayout>

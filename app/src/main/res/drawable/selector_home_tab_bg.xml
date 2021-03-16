@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape>
+            <solid android:width="2dp" android:color="@color/color_home_select_tab" />
+            <corners android:radius="11dp" />
+        </shape>
+    </item>
+    <item android:drawable="@color/colorWhite" android:state_selected="false" />
+</selector>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#261F1C"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_coin"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/iv_coin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_actual_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textStyle="bold"
+            android:textColor="@color/text_normal"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/iv_up_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_actual_price"
+            android:src="@mipmap/ico_home_rise" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_rmb_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_price"
+        android:layout_alignLeft="@+id/ll_price"
+        android:text="0.00"
+        android:textColor="@color/text_bbb_color"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_up_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_rmb_value"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@+id/tv_rmb_value"
+        android:text="0%"
+        android:textColor="@color/text_normal"
+        android:textSize="13sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tv_label3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="100dp"
+            android:text="@string/highest"
+            android:textColor="@color/gray_to_black"
+            android:textSize="10sp" />
+        <TextView
+            android:id="@+id/tv_highest_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_label3"
+            android:layout_alignRight="@+id/tv_label3"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="100dp"
+            android:text="@string/lowest"
+            android:textColor="@color/gray_to_black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_lowest_label"
+            android:layout_below="@+id/tv_highest_label"
+            android:layout_alignRight="@+id/tv_highest_label"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="100dp"
+            android:text="@string/day_volume"
+            android:textColor="@color/gray_to_black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_highest_price"
+            android:layout_width="wrap_content"
+            android:layout_alignTop="@+id/tv_label3"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="15dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+        <TextView
+            android:id="@+id/tv_lowest_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_highest_price"
+            android:layout_alignTop="@+id/tv_highest_label"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="15dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+        <TextView
+            android:id="@+id/tv_day_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_highest_price"
+            android:layout_alignTop="@+id/tv_lowest_label"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="15dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

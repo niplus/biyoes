@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--带图标的提示弹框-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/background_white"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付成功"
+                android:textSize="16sp"
+                android:textColor="@color/text_normal"
+                android:id="@+id/tv_title"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="5dp"
+            android:text="您已成为社区合伙人，赶快去邀请更多好友
+参加活动，享更多福利"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="25dp"
+            android:textSize="12sp"
+            android:textColor="@color/text_middle_to_normal"
+            android:id="@+id/tv_content"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_color"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="我在想想"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:id="@+id/tv_cancel"
+                android:background="@color/background_white"
+                android:textColor="@color/text_black_to_middle"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="确定"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:id="@+id/tv_confirm"
+                android:background="@color/background_white"
+                android:textColor="@color/commonBlue"/>
+        </LinearLayout>
+            
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

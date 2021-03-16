@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".my.RegistInviteActivity"
+        android:id="@+id/parent_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/registe_invite_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"/>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:id="@+id/scrollview"
+            app:layout_constraintTop_toBottomOf="@+id/layout_title">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/content">
+                <ImageView
+                    android:layout_width="156dp"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/regist_invite_hint"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/iv_hint"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@mipmap/regist_invite_illustration"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_hint"
+                    android:id="@+id/iv_bg_worker"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/inviter_card"
+                    app:layout_constraintTop_toTopOf="@+id/iv_bg_worker"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您的邀请码"
+                    android:textColor="#ffc5ad86"
+                    android:textSize="10sp"
+                    app:layout_constraintTop_toTopOf="@+id/iv_card"
+                    app:layout_constraintStart_toStartOf="@+id/iv_card"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_card"
+                    android:layout_marginTop="29dp"
+                    android:id="@+id/tv_card_title"
+                    />
+
+                <TextView
+                    android:layout_width="98dp"
+                    android:layout_height="31dp"
+                    android:text="12356"
+                    android:textColor="#ffd4a867"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:background="#FFF2DF"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tv_inviter_id"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_card_title"
+                    app:layout_constraintStart_toStartOf="@+id/tv_card_title"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_card_title"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="复制邀请码"
+                    android:textColor="#ff55bba9"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_inviter_id"
+                    app:layout_constraintStart_toStartOf="@+id/tv_inviter_id"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_inviter_id"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/tv_copy"
+                    />
+
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="@drawable/shape_dotted_line"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/tv_copy"-->
+<!--                    android:layout_marginTop="35dp"/>-->
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_copy"
+                    app:layout_constraintStart_toStartOf="@+id/tv_copy"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_copy"
+                    android:layout_marginTop="38dp"
+                    android:scaleType="fitXY"
+                    android:id="@+id/iv_qrcode"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" -扫码下载APP- "
+                    android:textColor="#ffc5ad86"
+                    android:textSize="10sp"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_qrcode"
+                    app:layout_constraintStart_toStartOf="@+id/iv_qrcode"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_qrcode"
+                    android:id="@+id/tv_card_hint"
+                    />
+
+                <Button
+                    android:layout_width="159dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_invite_button"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_card_hint"
+                    app:layout_constraintStart_toStartOf="@+id/tv_card_hint"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_card_hint"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/btn_save"
+                    android:text="保存邀请图片"
+                    android:textColor="#ffe8fffb"
+                    android:textSize="12sp"
+                    />
+
+                <Button
+                    android:layout_width="159dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_share_link_button"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_save"
+                    app:layout_constraintStart_toStartOf="@+id/btn_save"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_save"
+                    android:layout_marginTop="10dp"
+                    android:text="复制邀请链接"
+                    android:textColor="#ff55bca8"
+                    android:textSize="12sp"
+                    android:id="@+id/btn_copy"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+        <include layout="@layout/layout_newtitle_bar"
+            android:id="@+id/layout_title"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/inviter_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

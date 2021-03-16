@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_vbt-android" default="compile.module.vbt-android">
+  <dirname property="module.vbt-android.basedir" file="${ant.file.module_vbt-android}"/>
+  
+  <property name="module.jdk.home.vbt-android" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.vbt-android" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.vbt-android" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.vbt-android" value="-encoding UTF-8 -source 7 -target 7 ${compiler.args}"/>
+  
+  <property name="vbt-android.output.dir" value="${module.vbt-android.basedir}/out/production/VBT-android"/>
+  <property name="vbt-android.testoutput.dir" value="${module.vbt-android.basedir}/out/test/VBT-android"/>
+  
+  <path id="vbt-android.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="vbt-android.module.production.classpath">
+    <path refid="${module.jdk.classpath.vbt-android}"/>
+  </path>
+  
+  <path id="vbt-android.runtime.production.module.classpath">
+    <pathelement location="${vbt-android.output.dir}"/>
+  </path>
+  
+  <path id="vbt-android.module.classpath">
+    <path refid="${module.jdk.classpath.vbt-android}"/>
+    <pathelement location="${vbt-android.output.dir}"/>
+  </path>
+  
+  <path id="vbt-android.runtime.module.classpath">
+    <pathelement location="${vbt-android.testoutput.dir}"/>
+    <pathelement location="${vbt-android.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.vbt-android">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.vbt-android">
+    <patternset refid="excluded.from.module.vbt-android"/>
+  </patternset>
+  
+  
+  <target name="compile.module.vbt-android" depends="compile.module.vbt-android.production,compile.module.vbt-android.tests" description="Compile module VBT-android"/>
+  
+  <target name="compile.module.vbt-android.production" depends="register.custom.compilers" description="Compile module VBT-android; production classes"/>
+  
+  <target name="compile.module.vbt-android.tests" depends="register.custom.compilers,compile.module.vbt-android.production" description="compile module VBT-android; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.vbt-android" description="cleanup module">
+    <delete dir="${vbt-android.output.dir}"/>
+    <delete dir="${vbt-android.testoutput.dir}"/>
+  </target>
+</project>

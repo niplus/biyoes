@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">KLineChartLib</string>
+    <string name="kline_time">时间</string>
+    <string name="buy_max_price">买一价:</string>
+    <string name="max_price">最高价:</string>
+    <string name="min_price">最低价:</string>
+    <string name="sell_price">卖一价:</string>
+    <string name="up_down">涨跌额</string>
+    <string name="up_and_down_number">涨跌幅</string>
+    <string name="number">数量:</string>
+</resources>

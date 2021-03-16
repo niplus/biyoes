@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="@color/background_white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VBT/USDT"
+            android:textSize="15sp"
+            android:id="@+id/tv_name"
+            android:textColor="@color/colorText1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019/4/14 11:33"
+            android:textSize="10sp"
+            android:id="@+id/tv_time"
+            android:layout_marginLeft="120dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorText1"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kill_order"
+            android:textSize="13sp"
+            android:textColor="#54B3F6"
+            android:gravity="center"
+            android:id="@+id/tv_cancel"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buy"
+            android:textSize="13sp"
+            android:textColor="@color/price_green"
+            android:id="@+id/tv_entrust_type"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:id="@+id/tv_entrust_price"
+            android:layout_centerInParent="true"
+            android:text="10000"
+            android:textColor="@color/colorText1"/>
+
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="90%"
+            android:textColor="@color/colorText1"
+            android:layout_alignParentRight="true"
+            android:textSize="13sp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

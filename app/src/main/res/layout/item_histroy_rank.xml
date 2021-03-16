@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="第23周"
+        android:textColor="@color/black"
+        android:id="@+id/tv_week_item_history_rank"
+        android:textSize="12sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="23"
+        android:layout_centerInParent="true"
+        android:id="@+id/tv_rank_item_history_rank"
+        android:layout_below="@id/tv_week_item_history_rank"
+        android:textSize="29sp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/see_details"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/tv_see_details_item_history_rank"
+        android:textColor="@color/blue_to_weak"
+        android:gravity="center"
+        android:layout_height="30dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="奖励：待结算"
+        android:id="@+id/tv_money_item_history_rank"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/tv_rank_item_history_rank"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

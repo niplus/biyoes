@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="资产"
+        android:textColor="#ff333333"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:id="@+id/tv_title"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="#11BCBC"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        tools:layout_editor_absoluteX="140dp"
+        android:id="@+id/card_property"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="账户资产总资产折合"
+        android:textColor="#ffe7ffff"
+        android:textSize="13sp"
+        android:elevation="6dp"
+        app:layout_constraintTop_toTopOf="@+id/card_property"
+        app:layout_constraintStart_toStartOf="@+id/card_property"
+        android:layout_marginTop="34dp"
+        android:layout_marginStart="38dp"
+        android:id="@+id/tv_property_title"
+        />
+
+    <ImageView
+        android:id="@+id/is_open"
+        android:layout_width="14dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/eve_close"
+        app:layout_constraintTop_toTopOf="@+id/tv_property_title"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_property_title"
+        app:layout_constraintStart_toEndOf="@+id/tv_property_title"
+        android:elevation="6dp"
+        android:layout_marginStart="6dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.01"
+        android:textColor="#fff4ffff"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_property_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_property_title"
+        android:elevation="6dp"
+        android:layout_marginTop="9dp"
+        android:id="@+id/tv_property"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CNY"
+        android:textColor="#fff4ffff"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_property"
+        app:layout_constraintStart_toEndOf="@+id/tv_property"
+        android:elevation="6dp"
+        android:layout_marginStart="5dp"
+        />
+    
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/property_recharge"
+        app:layout_constraintTop_toBottomOf="@+id/card_property"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/iv_recharge"
+        app:layout_constraintEnd_toStartOf="@+id/iv_withdraw"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/property_withdraw"
+        app:layout_constraintTop_toTopOf="@+id/iv_recharge"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="@+id/iv_recharge"
+        android:id="@+id/iv_withdraw"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="充值"
+        android:textColor="#ff333333"
+        android:textSize="10sp"
+        android:id="@+id/tv_recharge"
+        app:layout_constraintStart_toStartOf="@+id/iv_recharge"
+        app:layout_constraintEnd_toEndOf="@+id/iv_recharge"
+        app:layout_constraintTop_toBottomOf="@+id/iv_recharge"
+        android:layout_marginTop="8dp"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@+id/iv_recharge"
+        app:layout_constraintStart_toStartOf="@+id/iv_recharge"
+        app:layout_constraintEnd_toEndOf="@+id/iv_recharge"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_recharge"
+        android:id="@+id/layout_property_recharge"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@+id/iv_withdraw"
+        app:layout_constraintStart_toStartOf="@+id/iv_withdraw"
+        app:layout_constraintEnd_toEndOf="@+id/iv_withdraw"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_withdraw"
+        android:id="@+id/layout_property_draw"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提现"
+        android:textColor="#ff333333"
+        android:textSize="10sp"
+        android:id="@+id/tv_withdraw"
+        app:layout_constraintStart_toStartOf="@+id/iv_withdraw"
+        app:layout_constraintEnd_toEndOf="@+id/iv_withdraw"
+        app:layout_constraintTop_toBottomOf="@+id/iv_withdraw"
+        android:layout_marginTop="8dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="#F3F3F3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_recharge"
+        android:layout_marginTop="7dp"
+        android:id="@+id/v_decoration"/>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartrefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/v_decoration">
+
+        <com.biyoex.app.common.widget.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tablayout_property"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/colorWhite"
+                app:tabIndicatorColor="@color/recharge_bg_red"
+                app:tabTextColor="@color/colorBlack"
+                app:tabSelectedTextColor="@color/recharge_bg_red">
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager_proerty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+            </androidx.viewpager.widget.ViewPager>
+        </LinearLayout>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?><!--交易页主要部分-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="false"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="20dp">
+
+    <include layout="@layout/market_fragment_title" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartrefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableLoadmore="false">
+
+        <com.biyoex.app.common.widget.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                app:elevation="0dp"
+                android:background="@color/colorWhite"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    app:layout_scrollFlags="scroll">
+                    <!--交易部分-->
+                    <LinearLayout
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:id="@+id/ll_buy_and_sell"
+                            android:layout_height="36dp">
+                            <TextView
+                                android:id="@+id/btn_buy"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/buy"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:id="@+id/btn_sell"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/sell"
+                                android:textColor="@color/gray_to_black" />
+                        </LinearLayout>
+                        <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:adjustViewBounds="true"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:src="@mipmap/trade_buy" />-->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:text="@string/price"
+                            android:textColor="@color/gray_to_black"
+                            android:textSize="10sp" />
+
+                        <!--单价-->
+                        <LinearLayout
+                            android:id="@+id/ll_buy_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_market_price"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/tv_sub"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="—"
+                                android:textColor="@color/color_home_list_hint"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:typeface="sans" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/color_home_list_hint" />
+
+                            <EditText
+                                android:id="@+id/ed_price"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="center"
+                                android:hint="@string/buy_price"
+                                android:inputType="numberDecimal"
+                                android:lines="1"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_normal"
+                                android:textColorHint="@color/colorText4"
+                                android:textSize="12sp" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/color_bg_market_price" />
+
+                            <TextView
+                                android:id="@+id/tv_add"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="＋"
+                                android:textColor="@color/color_bg_market_price"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/buy_price_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/number"
+                            android:textSize="10sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_market_price"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_number_sub"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="—"
+                                android:textColor="@color/color_bg_market_price"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:typeface="sans" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/color_bg_market_price" />
+
+                            <EditText
+                                android:id="@+id/edt_number"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/layout_transfer_bg"
+                                android:gravity="center"
+                                android:hint="@string/number"
+                                android:maxLines="1"
+                                android:numeric="decimal"
+                                android:paddingLeft="10dp"
+                                android:textStyle="bold"
+                                android:singleLine="true"
+                                android:textColor="@color/text_normal"
+                                android:textColorHint="@color/text_weak_light"
+                                android:textSize="12sp" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/color_bg_market_price" />
+
+                            <TextView
+                                android:id="@+id/tv_number_add"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="＋"
+                                android:textColor="@color/color_bg_market_price"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <!--百分比数量选择-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical">
+
+                            <com.warkiz.widget.IndicatorSeekBar
+                                android:id="@+id/seekbar_market"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="5dp"
+                                app:isb_max="100"
+                                app:isb_progress="0"
+                                app:isb_seek_smoothly="true"
+                                app:isb_show_indicator="rounded_rectangle"
+                                app:isb_show_thumb_text="false"
+                                app:isb_show_tick_marks_type="none"
+                                app:isb_show_tick_texts="false"
+                                app:isb_thumb_adjust_auto="false"
+                                app:isb_thumb_color="@color/price_green"
+                                app:isb_thumb_drawable="@mipmap/icon_seekbar"
+                                app:isb_thumb_text_color="@color/price_green"
+                                app:isb_tick_marks_drawable="@drawable/market_seekbar_select"
+                                app:isb_tick_marks_size="13dp"
+                                app:isb_ticks_count="5"
+                                app:isb_indicator_color="@color/price_red"
+                                app:isb_track_progress_color="@color/price_green" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/useful"
+                                android:textColor="@color/text_aaa_color"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/tv_useful"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="USDT"
+                                android:textColor="@color/text_normal"
+                                android:textSize="11sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/frozen"
+                                android:textColor="@color/text_aaa_color"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/user_account_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="USDT"
+                                android:textColor="@color/text_normal"
+                                android:textSize="11sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/amount"
+                                android:textColor="@color/text_aaa_color"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/tv_trade_volume"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text="--"
+                                android:textColor="@color/text_normal"
+                                android:textSize="11sp" />
+                        </RelativeLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            app:cardBackgroundColor="@color/price_green"
+                            app:cardCornerRadius="5dp">
+
+                            <Button
+                                android:id="@+id/btn_trade"
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp"
+                                android:background="@null"
+                                android:text="@string/login"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <!--市场部分-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:gravity="left"
+                                android:text="@string/rate"
+                                android:textColor="@color/text_weak_light"
+                                android:textSize="12sp" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:gravity="right"
+                                android:text="@string/volume"
+                                android:paddingEnd="10dp"
+                                android:textColor="@color/text_weak_light"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_sell"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:overScrollMode="never" />
+
+                            <TextView
+                                android:id="@+id/tv_activity"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:background="@color/price_red"
+                                android:gravity="center"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_current_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textStyle="bold"
+                                android:layout_marginTop="6dp"
+                                android:textColor="@color/price_green"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_price_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_below="@id/tv_current_price"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/text_weak_light"
+                                android:textSize="11sp" />
+
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_buy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:overScrollMode="never" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:gravity="left"
+                                android:text="@string/buy"
+                                android:textColor="@color/text_weak_light"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:gravity="right"
+                                android:text="@string/depth"
+                                android:textColor="@color/text_weak_light"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/line_color"
+                    app:layout_scrollFlags="scroll" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/iv_history_entrust"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:paddingEnd="10dp"
+                        android:scaleType="center"
+                        android:src="@mipmap/icon_history_entrust" />
+                    <TextView
+                        android:id="@+id/tv_allorder_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/iv_history_entrust"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_market_cancel_all"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="@string/cancel_all_order"
+                        android:textColor="@color/gray_to_black"
+                        android:textSize="13sp" />
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/st_website_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="10dp"
+                        app:tabIndicatorColor="@color/colorWhite"
+                        app:tabSelectedTextColor="@color/colorBlack"
+                        app:tabTextAppearance="@style/TabLayoutTextStyle"
+                        app:tabTextColor="@color/textBlack" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:background="@color/colorWhite"
+                android:layout_height="match_parent">
+                <com.biyoex.app.common.widget.MyViewPager
+                    android:id="@+id/market_bottom_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer" />
+        <attr name="animDuration" format="integer" />
+        <attr name="contentTextSize" format="dimension" />
+        <attr name="contentTextColor" format="color" />
+        <attr name="contentLineSpacingMultiplier" format="float" />
+        <attr name="expandDrawable" format="reference" />
+        <attr name="expandText" format="string" />
+        <attr name="collapseDrawable" format="reference" />
+        <attr name="collapseText" format="string" />
+        <attr name="expandCollapseTextColor" format="color" />
+        <attr name="DrawableAndTextGravity">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="SampleCircleImageView">
+        <!-- 源图片 -->
+        <attr name="src" format="reference"></attr>
+        <!-- 圆角大小 -->
+        <attr name="radius" format="dimension"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="MarqueeView">
+
+        <attr name="textcolor" format="color"></attr>
+
+        <attr name="textSize" format="dimension"></attr>
+
+        <attr name="marqueebackground" format="color"></attr>
+
+        <attr name="isRepeat" format="boolean"></attr>
+
+        <attr name="startPoint">
+            <enum name="start" value="0" />
+            <enum name="end" value="1" />
+        </attr>
+
+        <attr name="direction">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+
+        <attr name="speed" format="integer"></attr>
+
+        <attr name="marqueeInterval" format="integer" />
+        <attr name="marqueeAnimDuration" format="integer" />
+        <attr name="marqueeAnimIn" format="reference" />
+        <attr name="marqueeAnimOut" format="reference" />
+
+    </declare-styleable>
+
+    <declare-styleable name="LikeLayout">
+        <attr name="button_color" format="color" />
+        <attr name="checked_img" format="reference" />
+        <attr name="uncheck_img" format="reference" />
+        <attr name="button_title" format="string" />
+        <attr name="checked" format="boolean" />
+        <attr name="checked_background" format="reference" />
+        <attr name="unchecked_background" format="reference" />
+    </declare-styleable>
+    <!--星星控件-->
+<!--    <declare-styleable name="RatingStarView">-->
+<!--        <attr name="starMargin" format="integer|dimension" />-->
+<!--        <attr name="cornerRadius" format="float|dimension" />-->
+<!--        <attr name="starForegroundColor" format="color|reference" />-->
+<!--        <attr name="starBackgroundColor" format="color|reference" />-->
+<!--        <attr name="strokeColor" format="color|reference" />-->
+<!--        <attr name="strokeWidth" format="float|dimension" />-->
+<!--        <attr name="starNum" format="integer" />-->
+<!--        <attr name="rating" format="float" />-->
+<!--        <attr name="starThickness" format="float|fraction" />-->
+<!--        <attr name="drawStrokeForEmptyStar" format="boolean" />-->
+<!--        <attr name="drawStrokeForFullStar" format="boolean" />-->
+<!--        <attr name="drawStrokeForHalfStar" format="boolean" />-->
+<!--        <attr name="enableSelectRating" format="boolean" />-->
+<!--        <attr name="onlyHalfStar" format="boolean" />-->
+<!--    </declare-styleable>-->
+
+    <declare-styleable name="LetterNavigation">
+        <attr name="letterSize" format="dimension" />
+        <attr name="circleRadius" format="dimension" />
+        <attr name="unSelectorColor" format="color" />
+    </declare-styleable>
+
+    <!--corner_color 边角颜色，
+        scanner_color 扫描线颜色
+        possible_result_color 扫描点颜色
+        frame_color 扫描框边线颜色
+        mask_color 模糊区域颜色
+        label_text  框上方提示
+    -->
+    <declare-styleable name="ViewfinderView">
+        <attr name="corner_color" format="color" />
+        <attr name="laser_color" format="color" />
+        <attr name="frame_color" format="color" />
+        <attr name="mask_color" format="color" />
+        <attr name="result_point_color" format="color" />
+        <attr name="result_color" format="color" />
+        <attr name="label_text_color" format="color" />
+        <attr name="label_text" format="string" />
+        <attr name="label_text_size" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomeToggleButton">
+        <attr name="checked_drawable" format="reference" />
+        <attr name="unChecked_drawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="androidWheelView">
+        <attr name="awv_textsize" format="integer" />
+        <attr name="awv_lineSpace" format="float" />
+        <attr name="awv_centerTextColor" format="integer" />
+        <attr name="awv_outerTextColor" format="integer" />
+        <attr name="awv_dividerTextColor" format="integer" />
+        <attr name="awv_itemsVisibleCount" format="integer" />
+        <attr name="awv_isLoop" format="boolean" />
+        <attr name="awv_initialPosition" format="integer" />
+        <attr name="awv_scaleX" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="UserHeadView">
+        <attr name="nameTextSize" format="dimension" />
+        <attr name="showStatus" format="boolean" />
+    </declare-styleable>
+
+    <!--手势锁控件-->
+    <declare-styleable name="GestureLock">
+        <attr name="line_width" format="dimension" />
+        <attr name="line_normal_color" format="color" />
+        <attr name="line_error_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="PagerIndicator">
+        <attr name="point_width" format="dimension" />
+        <attr name="point_height" format="dimension" />
+        <attr name="point_margin" format="dimension" />
+        <attr name="unselect_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="DepthView">
+        <!--买方线条颜色、线条宽度、背景颜色-->
+        <attr name="dvBuyLineCol" format="color" />
+        <attr name="dvBuyLineStrokeWidth" format="integer" />
+        <attr name="dvBuyBgCol" format="color" />
+        <!--卖方线条颜色、背景颜色-->
+        <attr name="dvSellLineCol" format="color" />
+        <attr name="dvSellLineStrokeWidth" format="integer" />
+        <attr name="dvSellBgCol" format="color" />
+        <!--纵坐标颜色、字体大小-->
+        <attr name="dvOrdinateCol" format="color" />
+        <attr name="dvOrdinateTextSize" format="integer" />
+        <!--纵坐标个数-->
+        <attr name="dvOrdinateNum" format="integer" />
+        <!--横坐标颜色、字体大小-->
+        <attr name="dvAbscissaCol" format="color" />
+        <attr name="dvAbscissaTextSize" format="integer" />
+        <!--详情背景颜色、字体颜色、字体大小、游标线颜色-->
+        <attr name="dvDetailBgCol" format="color" />
+        <attr name="dvDetailTextCol" format="color" />
+        <attr name="dvDetailTextSize" format="integer" />
+        <attr name="dvDetailLineCol" format="color" />
+        <!--游标线宽度、交界圆点半径、价格文字说明、数量文字说明-->
+        <attr name="dvDetailLineWidth" format="float" />
+        <attr name="dvDetailPointRadius" format="integer" />
+        <attr name="dvDetailPriceTitle" format="string" />
+        <attr name="dvDetailVolumeTitle" format="string" />
+
+    </declare-styleable>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="all_images">all images</string>
+    <string name="folder_image_count">total is %1$d piece </string>
+    <string name="preview_image_count">%1$s/%2$s</string>
+    <string name="select_limit">Most choice:%1$ piece PIC</string>
+    <string name="complete">complete</string>
+    <string name="select_complete">complete(%1$s/%2$s)</string>
+    <string name="preview_count">Preview(%1$s)</string>
+    <string name="photo_crop">Picture cropping</string>
+    <string name="origin">origin</string>
+    <string name="origin_size">origin (%1$s)</string>
+    <string name="pick_pic">Select Image</string>
+    <string name="permission_denial_can_not_pick_pic">Permission is prohibited, local image cannot be selected</string>
+    <string name="permission_denial_can_not_open_camera">Permission is prohibited, the camera cannot be turned on</string>
+    <string name="hint">prompt</string>
+    <string name="confirm_delete_pic">Do you want to delete this photo?</string>
+    <string name="cancel">cancel</string>
+    <string name="confirm">confirm</string>
+    <string name="take_photo">take photo</string>
+    <string name="pick">pick</string>
+    <string name="total_pic">total_pic</string>
+
+    <string name="ip_all_images">所有图片</string>
+    <string name="ip_folder_image_count">共%1$d张</string>
+    <string name="ip_preview_image_count">%1$d/%2$d</string>
+    <string name="ip_select_limit">最多选择%1$d张图片</string>
+    <string name="ip_complete">完成</string>
+    <string name="ip_select_complete">完成(%1$d/%2$d)</string>
+    <string name="ip_preview">预览</string>
+    <string name="ip_preview_count">预览(%1$d)</string>
+    <string name="ip_photo_crop">图片裁剪</string>
+    <string name="ip_origin">原图</string>
+    <string name="ip_origin_size">原图(%1$s)</string>
+</resources>

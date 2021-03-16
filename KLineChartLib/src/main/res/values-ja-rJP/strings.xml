@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KLineChartLib</string>
+    <string name="kline_time">时间</string>
+    <string name="buy_max_price">一価買う:</string>
+    <string name="max_price">最高値:</string>
+    <string name="min_price">最低価:</string>
+    <string name="sell_price">一価で売る:</string>
+    <string name="up_down">揺額</string>
+    <string name="up_and_down_number">下げ幅</string>
+    <string name="number">数:</string>
+</resources>

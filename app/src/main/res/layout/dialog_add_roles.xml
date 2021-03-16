@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_radius_10"
+    android:paddingStart="23dp"
+    android:paddingEnd="23dp"
+    android:gravity="center"
+    android:paddingTop="18dp"
+    android:paddingBottom="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="添加POS角色"
+        tools:ignore="HardcodedText" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_choose_picture"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@mipmap/ic_choose_picture"-->
+<!--        android:layout_marginTop="14dp"-->
+<!--        tools:ignore="ContentDescription" />-->
+
+    <ImageView
+        android:id="@+id/iv_SwitchAccount_HeadPortrait"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="14dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="70dp"
+        android:maxHeight="70dp"
+        android:src="@mipmap/user_swi_roles"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="选择头像(选填)"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/mine_top_bg_color"
+        android:text="昵称"
+        android:layout_gravity="start"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/edit_input_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:maxLines="1"
+        android:maxLength="10"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/colorText4"
+        android:hint="1~10个字符，可由中英文字母、数字组成，不支持空格、特殊符号"
+        tools:ignore="Autofill,HardcodedText,SmallSp,TextFields" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#55666666"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:text="邀请码"
+        android:layout_gravity="start"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edit_input_InviteCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:textColorHint="#50000000"
+            android:hint="请输入邀请码"
+            tools:ignore="Autofill,HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_addRoles_paste_InviteCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#270909"
+            android:text="粘贴"
+            android:padding="5dp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#55666666"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="9sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="7dp"
+        android:text="邀请码可至VB矿池微信社群索要"
+        android:layout_gravity="start"
+        android:visibility="gone"
+        tools:ignore="HardcodedText,SmallSp" />
+
+    <TextView
+        android:id="@+id/tv_Immediately_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bg_deep_orange_radius_20"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="立即添加"
+        android:textColor="@color/white"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

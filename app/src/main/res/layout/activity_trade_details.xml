@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#002041"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    >
+    <include layout="@layout/public_title_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ns_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:id="@+id/ll_layout_currency"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <include layout="@layout/layout_trade_header"/>
+
+            <com.flyco.tablayout.CommonTabLayout
+                android:id="@+id/st_website_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/background_white"
+                app:tl_divider_color="@color/line_color"
+                app:tl_divider_width="1px"
+                app:tl_indicator_anim_duration="500"
+                app:tl_indicator_anim_enable="true"
+                app:tl_indicator_bounce_enable="true"
+                app:tl_indicator_color="@color/commonBlue"
+                app:tl_indicator_width_equal_title="true"
+                app:tl_textSelectColor="@color/commonBlue"
+                app:tl_textUnselectColor="@color/text_normal"
+                app:tl_textsize="13sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                />
+
+
+            <include layout="@layout/fragment_current_entrust" android:id="@+id/sold_record_layout" android:visibility="gone" />
+            <include layout="@layout/fragment_my_transaction" android:id="@+id/my_transaction_layout" android:visibility="gone" />
+            <include layout="@layout/fragment_trading_currency" android:id="@+id/trading_layout"/>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

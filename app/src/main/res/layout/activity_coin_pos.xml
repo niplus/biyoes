@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".home.activity.CoinPosActivity">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/layout_newtitle_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_coin_pos"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="累计Pos收益"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@id/imageView11"
+                app:layout_constraintTop_toTopOf="@+id/imageView11"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="收益明细"
+                android:id="@+id/tv_pos_earnings"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView25"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_pos_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/textView25"
+                app:layout_constraintTop_toBottomOf="@id/textView25"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:id="@+id/layout_coin_pos_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/textView25"
+                app:layout_constraintTop_toBottomOf="@id/imageView11"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/tv_coin_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:drawableEnd="@mipmap/icon_right_back"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="5dp"
+                    android:text="VBT币种介绍"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:visibility="gone"
+                    android:background="@color/color_home_ddd" />
+
+                <TextView
+                    android:id="@+id/tv_block_browser"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:drawableEnd="@mipmap/icon_right_back"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="5dp"
+                    android:text="ARR区块浏览器"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_home_ddd" />
+
+                <TextView
+                    android:id="@+id/tv_holding_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:drawableEnd="@mipmap/icon_right_back"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="5dp"
+                    android:text="POS持币排行榜"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_home_ddd" />
+
+                <TextView
+                    android:id="@+id/tv_pos_sum"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="1dp"
+                    android:drawableEnd="@mipmap/icon_right_back"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="5dp"
+                    android:text="Pos算力和邀请明细"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_home_ddd" />
+
+                <TextView
+                    android:id="@+id/tv_internal_transfer"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:drawableEnd="@mipmap/icon_right_back"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="5dp"
+                    android:text="站内转账"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_home_ddd" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_coin_pos2"
+                app:layout_constraintEnd_toEndOf="@+id/imageView11"
+                app:layout_constraintStart_toStartOf="@+id/imageView11"
+                app:layout_constraintTop_toBottomOf="@id/layout_coin_pos_one"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="邀请好友加入Pos理财增加算力"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView25"
+                app:layout_constraintTop_toBottomOf="@+id/layout_coin_pos_one"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/textView27"
+                app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/tv_share"
+                android:drawableStart="@mipmap/icon_white_share"
+                android:drawablePadding="5dp"
+                android:text="分享"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/imageView13"
+                app:layout_constraintTop_toTopOf="@+id/textView27"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="参与POS"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/imageView13"
+                app:layout_constraintTop_toBottomOf="@+id/imageView13"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/edit_pos_number"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_view_pos_edit"
+                android:hint="请输入要参与POS的VBT数量"
+                android:paddingStart="10dp"
+                android:inputType="numberDecimal"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView13"
+                app:layout_constraintStart_toStartOf="@+id/textView29"
+                app:layout_constraintTop_toBottomOf="@+id/textView29"
+                tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+            <com.biyoex.app.common.widget.SwitchButton
+                android:layout_width="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/switch_btn"
+                android:visibility="gone"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toTopOf="@id/edit_pos_number"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:id="@+id/tv_is_auto"
+                android:text="关闭自动复投"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/switch_btn"
+                app:layout_constraintEnd_toStartOf="@+id/switch_btn"
+                app:layout_constraintTop_toTopOf="@+id/switch_btn"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_add_pos"
+                android:layout_width="68dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/bg_view_pos_buy"
+                android:gravity="center"
+                android:text="参与POS"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/edit_pos_number"
+                app:layout_constraintEnd_toEndOf="@id/edit_pos_number"
+                app:layout_constraintTop_toTopOf="@id/edit_pos_number"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="我的POS"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/edit_pos_number"
+                app:layout_constraintTop_toBottomOf="@id/edit_pos_number"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/color_gray_f3"
+                app:layout_constraintEnd_toEndOf="@id/textView30"
+                app:layout_constraintStart_toStartOf="@id/textView30"
+                app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+            <TextView
+                android:id="@+id/tv_yesterday_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="昨日最佳持币(VBT)"
+                android:textColor="@color/gray_to_black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/textView30"
+                app:layout_constraintTop_toBottomOf="@+id/view10"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_min_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="最低持币"
+                android:textColor="@color/gray_to_black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/tv_yesterday_name"
+                app:layout_constraintTop_toTopOf="@+id/tv_yesterday_name"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_yesterday_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tv_yesterday_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_yesterday_name" />
+
+            <TextView
+                android:id="@+id/tv_min_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tv_min_name"
+                app:layout_constraintTop_toTopOf="@id/tv_yesterday_price" />
+
+            <TextView
+                android:id="@+id/tv_account_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="账户余额"
+                android:textColor="@color/gray_to_black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_yesterday_price"
+                app:layout_constraintTop_toBottomOf="@+id/tv_yesterday_price"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_pos_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的POS余额"
+                android:textColor="@color/gray_to_black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tv_min_name"
+                app:layout_constraintTop_toTopOf="@+id/tv_account_name"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_account_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tv_account_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_account_name" />
+
+            <TextView
+                android:id="@+id/tv_pos_account_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tv_min_number"
+                app:layout_constraintTop_toTopOf="@id/tv_account_number" />
+
+            <TextView
+                android:id="@+id/tv_cancel_pos"
+                android:layout_width="68dp"
+                android:layout_height="30dp"
+                android:background="@drawable/tv_view_cancel_pos"
+                android:gravity="center"
+                android:text="退出POS"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_pos_account_number"
+                app:layout_constraintEnd_toEndOf="@id/tv_add_pos"
+                app:layout_constraintStart_toStartOf="@id/tv_add_pos"
+                app:layout_constraintTop_toTopOf="@id/tv_yesterday_name"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/tv_account_number"
+                tools:ignore="MissingConstraints">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_gray_f3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="17dp"
+                    android:text="年化持币收益率"
+                    android:textColor="@color/color_262322"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:text="收益率 (%)"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/text_middle_light"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <LinearLayout
+                    android:id="@+id/one_curve_graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    tools:ignore="Orientation" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:text="持币数(个)"
+                    android:layout_marginEnd="50dp"
+                    android:layout_gravity="end"
+                    android:textColor="@color/text_middle_light"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_gray_f3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="17dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="最近一周Pos收益"
+                        android:textColor="@color/color_262322"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="提升收益"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/color_F96868"
+                        android:id="@+id/tv_open_dialog"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:text="个数"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:textColor="@color/text_middle_light"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <LinearLayout
+                    android:id="@+id/two_curve_graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="Orientation" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:text="时间"
+                    android:layout_marginEnd="50dp"
+                    android:layout_gravity="end"
+                    android:textColor="@color/text_middle_light"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_gray_f3" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/rv_pos_earnings"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

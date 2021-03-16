@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".my.activity.FaceRecognitionResultActivity">
+
+
+        <include layout="@layout/layout_newtitle_bar"
+            android:id="@+id/layout_title"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/face_failed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_title"
+            app:layout_constraintBottom_toTopOf="@+id/tv_hint"
+            android:id="@+id/iv_hint"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="很抱歉！您的认证失败"
+            android:textColor="#ff1e1e1e"
+            android:textSize="9sp"
+            app:layout_constraintTop_toBottomOf="@+id/iv_hint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btn_confirm"
+            android:id="@+id/tv_hint"
+            />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="27dp"
+            android:text="重新认证"
+            android:textColor="#ffe2ffff"
+            android:textSize="10sp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/shape_button_background"
+            android:id="@+id/btn_confirm"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

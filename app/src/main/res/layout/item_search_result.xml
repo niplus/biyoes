@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="107dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_search"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/tv_search_coin"
+        android:textColor="@color/text_normal"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_normal"
+        android:textSize="15sp"
+        android:id="@+id/tv_price"
+        android:layout_marginLeft="146dp"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:visibility="gone"
+        android:layout_marginLeft="250dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/tv_trend"/>
+    
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/ico_collect_normal"
+        android:id="@+id/iv_collection_status"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"/>
+
+    <View
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:id="@+id/click_view"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

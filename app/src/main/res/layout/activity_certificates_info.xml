@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+    
+   <include layout="@layout/layout_newtitle_bar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/certificates"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="29dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_title_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="15dp"
+        android:text="@string/name"
+        android:textSize="15sp"
+        android:textColor="@color/colorBlack"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_layout_passport"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/layout_press_style_white"
+        >
+
+
+        <EditText
+            android:id="@+id/ed_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:hint="@string/please_input_name"
+            android:textSize="20sp"
+            android:textColor="@color/text_normal"
+            android:textColorHint="@color/text_weak_light"
+            android:background="@null"
+            android:layout_marginRight="20dp"
+            />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"
+        />
+
+    <TextView
+        android:id="@+id/tv_title_certificates_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:text="@string/certificate_type"
+        android:textSize="15sp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="20dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_layout_certificates_type"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/layout_press_style_white"
+        >
+
+        <Spinner
+            android:id="@+id/sp_certificates_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:overlapAnchor="false"
+            />
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/arrow_down"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"
+        />
+    <TextView
+        android:id="@+id/tv_title_credential_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:text="@string/card_number"
+        android:textSize="15sp"
+        android:textColor="@color/textBlack"
+        android:layout_marginTop="20dp"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_layout_credential_no"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/layout_press_style_white"
+        >
+
+        <EditText
+            android:id="@+id/ed_credential_no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:hint="@string/please_card_id"
+            android:textSize="20sp"
+            android:textColor="@color/text_normal"
+            android:textColorHint="@color/text_weak_light"
+            android:background="@null"
+            android:inputType="textVisiblePassword"
+            android:layout_marginRight="20dp"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="140dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="23dp"
+        android:layout_marginTop="50dp"
+        >
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/my_theme"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

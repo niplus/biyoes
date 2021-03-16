@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="30dp"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/cancel"
+        android:textColor="@color/text_bbb_color"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="@string/register"
+        android:textColor="@color/textBlack"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/iv_back"
+        app:layout_constraintTop_toBottomOf="@+id/iv_back" />
+    <EditText
+        android:id="@+id/et_account"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="45dp"
+        android:background="@null"
+        android:hint="@string/account"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/text_bbb_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/textView37" />
+    <View
+        android:id="@+id/view15"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_home_ddd"
+        app:layout_constraintTop_toBottomOf="@+id/et_account" />
+    <EditText
+        android:id="@+id/ed_set_password"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/text_bbb_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/et_account" />
+
+    <ImageView
+        android:id="@+id/iv_new_eyes"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="center"
+        android:src="@mipmap/e_close"
+        app:layout_constraintBottom_toBottomOf="@+id/ed_set_password"
+        app:layout_constraintEnd_toEndOf="@+id/ed_set_password"
+        app:layout_constraintTop_toTopOf="@+id/ed_set_password" />
+
+    <View
+        android:id="@+id/view17"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_home_ddd"
+        app:layout_constraintTop_toBottomOf="@+id/ed_set_password" />
+
+    <EditText
+        android:id="@+id/ed_again_pw"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:hint="@string/repeat_pass"
+        android:inputType="textPassword"
+        android:textColorHint="@color/text_bbb_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/view17" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_home_ddd"
+        app:layout_constraintTop_toBottomOf="@id/ed_again_pw" />
+
+    <ImageView
+        android:id="@+id/iv_again_eves"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="center"
+        android:src="@mipmap/e_close"
+        app:layout_constraintBottom_toBottomOf="@+id/ed_again_pw"
+        app:layout_constraintEnd_toEndOf="@+id/ed_again_pw"
+        app:layout_constraintTop_toTopOf="@+id/ed_again_pw" />
+    <EditText
+        android:id="@+id/edit_shareCode"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:hint="@string/invite_code_no_necessary"
+        android:inputType="text"
+        android:textColorHint="@color/text_bbb_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_again_eves" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_home_ddd"
+        app:layout_constraintTop_toBottomOf="@id/edit_shareCode" />
+
+    <EditText
+        android:id="@+id/ed_code"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="35dp"
+        android:background="@null"
+        android:hint="@string/certify_code"
+        android:inputType="number"
+        android:textColorHint="@color/text_bbb_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/edit_shareCode" />
+
+    <View
+        android:id="@+id/view16"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_home_ddd"
+        app:layout_constraintTop_toBottomOf="@+id/ed_code"
+        />
+
+    <Button
+        android:id="@+id/tv_send_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="@string/send_certify_code"
+        android:textColor="@color/my_theme"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ed_code"
+        app:layout_constraintEnd_toEndOf="@+id/ed_code"
+        app:layout_constraintTop_toTopOf="@+id/ed_code" />
+
+    <com.biyoex.app.common.widget.AutoButton
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginTop="39dp"
+        android:background="@color/my_theme"
+        android:gravity="center"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/ed_code"
+   />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击注册即表示您同意Biyoex网《服务条款》"
+        android:id="@+id/tv_server_message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

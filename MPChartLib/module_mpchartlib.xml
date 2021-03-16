@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_mpchartlib" default="compile.module.mpchartlib">
+  <dirname property="module.mpchartlib.basedir" file="${ant.file.module_mpchartlib}"/>
+  
+  <property name="module.jdk.home.mpchartlib" value="${jdk.home.android_api_29_platform}"/>
+  <property name="module.jdk.bin.mpchartlib" value="${jdk.bin.android_api_29_platform}"/>
+  <property name="module.jdk.classpath.mpchartlib" value="jdk.classpath.android_api_29_platform"/>
+  
+  <property name="compiler.args.mpchartlib" value="-encoding UTF-8 -source 7 -target 7 ${compiler.args}"/>
+  
+  <property name="mpchartlib.output.dir" value="${module.mpchartlib.basedir}/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes"/>
+  <property name="mpchartlib.testoutput.dir" value="${module.mpchartlib.basedir}/build/intermediates/javac/debugUnitTest/compileDebugUnitTestJavaWithJavac/classes"/>
+  
+  <path id="mpchartlib.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="mpchartlib.module.production.classpath">
+    <path refid="${module.jdk.classpath.mpchartlib}"/>
+  </path>
+  
+  <path id="mpchartlib.runtime.production.module.classpath">
+    <pathelement location="${mpchartlib.output.dir}"/>
+  </path>
+  
+  <path id="mpchartlib.module.classpath">
+    <path refid="${module.jdk.classpath.mpchartlib}"/>
+    <pathelement location="${mpchartlib.output.dir}"/>
+  </path>
+  
+  <path id="mpchartlib.runtime.module.classpath">
+    <pathelement location="${mpchartlib.testoutput.dir}"/>
+    <pathelement location="${mpchartlib.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.mpchartlib">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.mpchartlib">
+    <patternset refid="excluded.from.module.mpchartlib"/>
+  </patternset>
+  
+  <path id="mpchartlib.module.sourcepath">
+    <dirset dir="${module.mpchartlib.basedir}">
+      <include name="build/generated/source/apt/debug"/>
+      <include name="build/generated/source/buildConfig/debug"/>
+      <include name="build/generated/res/resValues/debug"/>
+      <include name="src/main/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.mpchartlib" depends="compile.module.mpchartlib.production,compile.module.mpchartlib.tests" description="Compile module MPChartLib"/>
+  
+  <target name="compile.module.mpchartlib.production" depends="register.custom.compilers" description="Compile module MPChartLib; production classes">
+    <mkdir dir="${mpchartlib.output.dir}"/>
+    <javac2 destdir="${mpchartlib.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.mpchartlib}/javac">
+      <compilerarg line="${compiler.args.mpchartlib}"/>
+      <bootclasspath refid="mpchartlib.module.bootclasspath"/>
+      <classpath refid="mpchartlib.module.production.classpath"/>
+      <src refid="mpchartlib.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.mpchartlib"/>
+    </javac2>
+    
+    <copy todir="${mpchartlib.output.dir}">
+      <fileset dir="${module.mpchartlib.basedir}/build/generated/source/apt/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.mpchartlib.basedir}/build/generated/source/buildConfig/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.mpchartlib.basedir}/build/generated/res/resValues/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.mpchartlib.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.mpchartlib.tests" depends="register.custom.compilers,compile.module.mpchartlib.production" description="compile module MPChartLib; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.mpchartlib" description="cleanup module">
+    <delete dir="${mpchartlib.output.dir}"/>
+    <delete dir="${mpchartlib.testoutput.dir}"/>
+  </target>
+</project>

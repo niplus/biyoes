@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginStart="25dp"
+    android:layout_marginEnd="25dp"
+    android:background="@drawable/bg_item_home_pos"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="提高收益"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_back"
+        android:src="@mipmap/icon_dialog_pos_cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/textView33"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView33" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_dialog_pos_tv"
+        android:text="1.持有更多的VBT参与Pos"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="14sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/gray_to_black"
+        app:layout_constraintTop_toBottomOf="@+id/textView33" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.分享给好友"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/tv_dialog_pos_share"
+        android:textSize="14sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/gray_to_black"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dialog_pos_tv" />
+
+    <TextView
+        android:id="@+id/tv_go_market"
+        android:layout_width="125dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_dialog_pos"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="购买比特币"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dialog_pos_share" />
+
+    <TextView
+        android:id="@+id/tv_dialog_share"
+        android:layout_width="125dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_corners_5_red"
+        android:gravity="center"
+        android:text="分享"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_go_market" />
+</androidx.constraintlayout.widget.ConstraintLayout>

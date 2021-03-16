@@ -1,0 +1,127 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.ToolBar" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!--标题栏颜色-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- 各控制元件(如：check box、switch 或是 radoi) 被勾选 (checked) 或是选定 (selected) 的颜色 -->
+        <item name="colorAccent">@color/commonBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- 各控制元件的预设颜色 -->
+        <item name="colorControlNormal">@color/commonBlue</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.start" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!--标题栏颜色-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- 各控制元件(如：check box、switch 或是 radoi) 被勾选 (checked) 或是选定 (selected) 的颜色 -->
+        <item name="colorAccent">@color/commonBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/colorBlack</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- 各控制元件的预设颜色 -->
+        <item name="colorControlNormal">@color/commonBlue</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--给启动页设置样式，去除白屏-->
+
+    <!--底部进出dialog-->
+    <style name="BottomDialog" parent="@android:style/Theme.Holo.Dialog">
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <!--背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 还可以加入一些弹出和退出的动画 (lan)-->
+        <item name="android:windowAnimationStyle">@style/BottomDialogAnimation</item>
+    </style>
+    <!-- 自定义Dialog动画 -->
+    <style name="BottomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/dialog_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_bottom_out</item>
+    </style>
+    <style name="normalDialog" parent="@style/Base.V7.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <!--顶部进出dialog-->
+    <style name="TopDialog" parent="@android:style/Theme.Holo.Dialog">
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <!--背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="SwitchStyle" parent="Theme.AppCompat.Light">
+        <!--开启时的颜色-->
+        <item name="colorControlActivated">#13c2c2</item>
+        <!--关闭时的颜色-->
+        <item name="colorSwitchThumbNormal">#969696</item>
+        <!--关闭时的轨迹颜色-->
+        <item name="android:colorForeground">#666666</item>
+    </style>
+
+    <!--小米分享朋友圈会崩溃-->
+    <style name="WxNoTitleBar" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="CustomTabStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="tabPaddingStart">0dp</item>
+        <item name="tabPaddingEnd">0dp</item>
+        <item name="tabPaddingTop">0dp</item>
+        <item name="tabPaddingBottom">0dp</item>
+    </style>
+
+    <declare-styleable name="PercentText">
+        <attr name="text" format="string"></attr>
+        <attr name="backColorDefault" format="color" />
+        <attr name="backColor" format="color" />
+        <attr name="defaultPercent" format="integer" />
+        <attr name="textsize" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="alignLeft" format="dimension" />
+    </declare-styleable>
+
+    <style name="TabLayoutTextStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="pop_out_and_int" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popupwindow_left_in</item>
+        <item name="android:windowExitAnimation">@anim/popupwindow_left_out</item>
+    </style>
+</resources>

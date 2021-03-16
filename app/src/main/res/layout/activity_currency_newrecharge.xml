@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/recharge"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/icon_history" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 币种 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            android:background="#F6F8F9"
+            android:paddingStart="13dp"
+            android:gravity="center_vertical"
+            android:paddingEnd="13dp">
+
+            <TextView
+                android:id="@+id/tv_shortName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="BTC"
+                android:textColor="@color/text_normal"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/switchover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="切换币种"
+                android:textSize="11sp"
+                android:textColor="#13C2C2"
+                tools:ignore="RelativeOverlap" />
+
+        </LinearLayout>
+
+        <!-- 链名称 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_chainName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_chainName_shortName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="链名称"
+                android:textColor="@color/text_normal"
+                android:textSize="12sp"
+                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_chainName_shortName"
+                android:layout_marginTop="6dp"
+                android:id="@+id/rg_chain"
+                android:orientation="horizontal">
+
+<!--                <RadioButton-->
+<!--                    android:layout_width="60dp"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:background="@drawable/selector_recharge_chose"-->
+<!--                    android:button="@null"-->
+<!--                    android:textColor="@color/recharge_textcolor_chose"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="ERC20"/>-->
+<!--                <RadioButton-->
+<!--                    android:layout_width="60dp"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:background="@drawable/selector_recharge_chose"-->
+<!--                    android:button="@null"-->
+<!--                    android:textColor="@color/recharge_textcolor_chose"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="TRC20"-->
+<!--                    android:layout_marginStart="15dp"/>-->
+
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:background="#F6F8F9">
+        <ImageView
+            android:id="@+id/iv_qr_code"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="36dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/iv_save_iamge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="26dp"
+            android:padding="7dp"
+            android:textColor="#13C2C2"
+            android:textSize="11sp"
+            android:background="@drawable/shape_save_address"
+            android:text="@string/save_zxing_images" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/text_normal"
+            android:textSize="11dp"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/iv_copy"
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_recharge_text_copy_bg"
+            android:padding="5dp"
+            android:textSize="10sp"
+            android:text="@string/copy_address"
+            android:gravity="center"
+            android:layout_marginBottom="26dp"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_payment_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/text_normal"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_copy_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/layout_recharge_copy_bg"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/copy_payment" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_payment_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="@string/recharge_hint_info"
+        android:textColor="@color/recharge_bg_red"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_recharge_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/recharge_info"
+        android:textColor="#666666"
+        android:textSize="12dp"
+        tools:ignore="ObsoleteLayoutParam,SpUsage" />
+</LinearLayout>

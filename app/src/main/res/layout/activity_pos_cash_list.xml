@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home.activity.PosCashListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/bg_cash_list"
+            tools:ignore="ContentDescription" />
+
+        <include
+            android:id="@+id/include2"
+            layout="@layout/layout_title_while_bar" />
+
+        <TextView
+            android:id="@+id/tv_pos_cash_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/include2"
+            android:layout_marginStart="16dp"
+            android:text="持币排行榜"
+            android:textSize="26sp"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_distance_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_pos_cash_list"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:text="距离NO.1你还差一丢丢"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:paddingStart="1dp"
+        android:paddingEnd="20dp"
+        android:background="@color/color_gray_f3"
+        tools:ignore="UselessLeaf">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="排名"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:textColor="@color/textBlack"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="UID"
+            android:layout_weight="2"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/textBlack"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="持币数量"
+            android:textColor="@color/textBlack"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_pos_cash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

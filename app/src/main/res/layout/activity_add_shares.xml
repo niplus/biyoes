@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    app:defaultPercent="70"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".property.TransferActivity">
+    <include layout="@layout/layout_newtitle_bar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/add_shares"
+                android:textSize="10sp"
+                android:padding="16dp"
+                android:textColor="@color/textBlack"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:id="@+id/lock_shares"
+                android:background="@drawable/layout_transfer_bg"
+                android:layout_height="89dp">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingStart="20dp"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="@string/start_putong"
+                        android:drawableLeft="@drawable/circle_green"
+                        android:drawablePadding="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:layout_height="0dp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="@string/end_new"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/circle_red"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="0dp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:background="@color/line_color"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:layout_width="67dp"
+                    android:text="@string/add_shares_title"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:drawableTop="@mipmap/icon_lock"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:id="@+id/layout_transfer"
+                android:visibility="gone"
+                android:background="@drawable/layout_transfer_bg"
+                android:layout_height="89dp">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingStart="20dp"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="@string/start_new"
+                        android:drawableLeft="@drawable/circle_green"
+                        android:id="@+id/transfer_start"
+                        android:drawablePadding="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:layout_height="0dp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_color"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="@string/end_putong"
+                        android:layout_weight="1"
+                        android:id="@+id/transfer_end"
+                        android:drawableLeft="@drawable/circle_red"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="0dp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:background="@color/line_color"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:layout_width="67dp"
+                    android:text="@string/transfer"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:drawableTop="@mipmap/icon_refresh"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="币种"
+                android:textSize="10sp"
+                android:textColor="@color/textBlack"
+                android:layout_margin="16dp"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/textBlack"
+                    android:textSize="25sp"
+                    android:id="@+id/tv_start_name"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@mipmap/icon_rightback"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:id="@+id/tv_end_name"
+                    android:textColor="@color/textBlack"
+                    android:textSize="25sp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="16dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="@color/textBlack"
+                    android:text="@string/add_shares_number"
+                    android:id="@+id/max_locksum"
+                    android:layout_height="wrap_content" />
+                <com.biyoex.app.common.widget.PercentTextLayout
+                    android:layout_width="375dp"
+                    app:backColor="@color/percenttext_color"
+                    app:backColorDefault="@color/percentbackground"
+                    android:id="@+id/text_prcent"
+                    app:text="点个赞！"
+                    app:textColor="@android:color/white"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/add_shares_number"
+                android:textSize="10sp"
+                android:textColor="@color/textBlack"
+                android:layout_margin="16dp"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingStart="16dp"
+                android:layout_height="42dp">
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="@string/lock_hint"
+                    android:textSize="15sp"
+                    android:id="@+id/edit_locknum"
+                    android:numeric="decimal"
+                    android:background="@null"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_name_now"
+                    android:textColor="@color/textBlack"
+                    android:layout_height="match_parent" />
+                <View
+                    android:layout_width="1dp"
+                    android:background="@color/line_color"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/all"
+                    android:layout_marginRight="16dp"
+                    android:textColor="@color/blue_to_weak"
+                    android:id="@+id/tv_user_allsum"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_margin="16dp"
+                android:id="@+id/user_allsum"
+                android:textSize="10sp"
+                android:textColor="@color/gray_to_black"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/lock_explain"
+                android:layout_margin="16dp"
+                android:textSize="10sp"
+                android:padding="16dp"
+                android:background="@color/color_market_tab_bg"
+                android:textColor="@color/gray_to_black"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_width="200dp"
+                android:background="@color/login_yellow"
+                android:text="@string/add_shares_title"
+                android:id="@+id/btn_lock"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:layout_height="41dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

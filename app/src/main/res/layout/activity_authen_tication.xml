@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".my.activity.OCRRealNameActivity">
+
+    <include
+        android:id="@+id/include4"
+        layout="@layout/layout_newtitle_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="25dp"
+                android:paddingTop="25dp"
+                android:text="Name(姓名)"
+                android:textColor="@color/textBlack"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:background="@null"
+                android:hint="Please enter your name"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+            <View
+                android:id="@+id/view21"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/color_home_ddd"
+                app:layout_constraintEnd_toEndOf="@+id/edit_name"
+                app:layout_constraintStart_toStartOf="@+id/edit_name"
+                app:layout_constraintTop_toBottomOf="@id/edit_name" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="25dp"
+                android:paddingTop="25dp"
+                android:text="ID number(身份證號碼)"
+                android:textColor="@color/textBlack"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_name" />
+
+            <EditText
+                android:id="@+id/edit_card_id"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:background="@null"
+                android:digits="1234567890xX"
+                android:hint="Please enter your ID number"
+                android:inputType="number"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:id="@+id/view20"
+                android:background="@color/color_home_ddd"
+                app:layout_constraintEnd_toEndOf="@+id/edit_card_id"
+                app:layout_constraintStart_toStartOf="@+id/edit_card_id"
+                app:layout_constraintTop_toBottomOf="@id/edit_card_id" />
+
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Front photo of ID card"
+                android:textColor="@color/colorText1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/edit_card_id"
+                app:layout_constraintTop_toBottomOf="@+id/edit_card_id" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorText1"
+                android:textSize="16sp"
+                android:text="身份證(護照)正面照"
+                app:layout_constraintStart_toStartOf="@+id/textView41"
+                app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+            <ImageView
+                android:id="@+id/iv_positive"
+                android:layout_width="189dp"
+                android:layout_height="121dp"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/front"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Back photo of ID card"
+                android:textColor="@color/colorText1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/view20"
+                app:layout_constraintTop_toBottomOf="@id/iv_positive" />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="身份證(護照)背面照"
+                android:textColor="@color/colorText1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/textView42"
+                app:layout_constraintTop_toBottomOf="@id/textView42" />
+
+            <ImageView
+                android:id="@+id/iv_other_side"
+                android:layout_width="189dp"
+                android:layout_height="121dp"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:layout_marginTop="15dp"
+                android:src="@mipmap/back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Identity Card Authentication Photo"
+                android:textColor="@color/colorText1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/view20"
+                app:layout_constraintTop_toBottomOf="@id/iv_other_side" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="身份證(護照)驗證照"
+                android:id="@+id/textview55"
+                app:layout_constraintTop_toBottomOf="@id/textView43"
+                app:layout_constraintStart_toStartOf="@id/textView43"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/iv_hold_positive"
+                android:layout_width="189dp"
+                android:layout_height="121dp"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/hand"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview55" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/texthint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_hold_positive"
+                android:layout_marginTop="10dp"
+                android:text="Hand held photos need to include signature and date"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/textchinahint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/texthint"
+                android:layout_marginTop="10dp"
+                android:text="手持照片需要包括日期和簽名"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/btn_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="25dp"
+                app:layout_goneMarginBottom="40dp"
+                android:background="@drawable/select_login_btn"
+                android:gravity="center"
+                android:text="@string/btn_next"
+                android:layout_marginBottom="40dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/textchinahint"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_white"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="实际到账数量：20000USDT"
+        android:layout_margin="16dp"
+        android:textColor="@color/text_black_to_middle"
+        android:id = "@+id/tv_money"
+        android:layout_marginLeft="40dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/draw_bottom_dialog"
+        android:textColor="@color/text_black_to_middle"
+        android:layout_marginLeft="40dp"
+        />
+    <com.biyoex.app.common.widget.CodeInputView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin = "40dp"
+        android:id="@+id/code_input"
+        android:layout_gravity="center_horizontal">
+
+    </com.biyoex.app.common.widget.CodeInputView>
+</LinearLayout>

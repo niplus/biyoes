@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Banner">
+        <attr name="auto_play" format="boolean"/>
+        <attr name="time_interval" format="integer"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_imagepicker" default="compile.module.imagepicker">
+  <dirname property="module.imagepicker.basedir" file="${ant.file.module_imagepicker}"/>
+  
+  <property name="module.jdk.home.imagepicker" value="${jdk.home.android_api_29_platform}"/>
+  <property name="module.jdk.bin.imagepicker" value="${jdk.bin.android_api_29_platform}"/>
+  <property name="module.jdk.classpath.imagepicker" value="jdk.classpath.android_api_29_platform"/>
+  
+  <property name="compiler.args.imagepicker" value="-encoding UTF-8 -source 7 -target 7 ${compiler.args}"/>
+  
+  <property name="imagepicker.output.dir" value="${module.imagepicker.basedir}/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes"/>
+  <property name="imagepicker.testoutput.dir" value="${module.imagepicker.basedir}/build/intermediates/javac/debugUnitTest/compileDebugUnitTestJavaWithJavac/classes"/>
+  
+  <path id="imagepicker.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="imagepicker.module.production.classpath">
+    <path refid="${module.jdk.classpath.imagepicker}"/>
+    <path refid="library.gradle:_androidx.collection:collection:1.0.0@jar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-common:2.0.0@jar.classpath"/>
+    <path refid="library.gradle:_androidx.arch.core:core-common:2.0.0@jar.classpath"/>
+    <path refid="library.gradle:_androidx.annotation:annotation:1.0.0@jar.classpath"/>
+    <path refid="library.gradle:_androidx.appcompat:appcompat:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.recyclerview:recyclerview:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_com.github.chrisbanes.photoview:library:1.2.4@aar.classpath"/>
+    <path refid="library.gradle:_androidx.legacy:legacy-support-v4:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.fragment:fragment:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.vectordrawable:vectordrawable-animated:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.legacy:legacy-support-core-ui:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.legacy:legacy-support-core-utils:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.vectordrawable:vectordrawable:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.loader:loader:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.media:media:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.viewpager:viewpager:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.coordinatorlayout:coordinatorlayout:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.drawerlayout:drawerlayout:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.customview:customview:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.swiperefreshlayout:swiperefreshlayout:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.core:core:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.versionedparcelable:versionedparcelable:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.cursoradapter:cursoradapter:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-runtime:2.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.documentfile:documentfile:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.print:print:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-viewmodel:2.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.interpolator:interpolator:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-livedata:2.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.arch.core:core-runtime:2.0.0@aar.classpath"/>
+  </path>
+  
+  <path id="imagepicker.runtime.production.module.classpath">
+    <pathelement location="${imagepicker.output.dir}"/>
+    <path refid="library.gradle:_androidx.collection:collection:1.0.0@jar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-common:2.0.0@jar.classpath"/>
+    <path refid="library.gradle:_androidx.arch.core:core-common:2.0.0@jar.classpath"/>
+    <path refid="library.gradle:_androidx.annotation:annotation:1.0.0@jar.classpath"/>
+    <path refid="library.gradle:_androidx.appcompat:appcompat:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.recyclerview:recyclerview:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_com.github.chrisbanes.photoview:library:1.2.4@aar.classpath"/>
+    <path refid="library.gradle:_androidx.legacy:legacy-support-v4:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.fragment:fragment:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.vectordrawable:vectordrawable-animated:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.legacy:legacy-support-core-ui:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.legacy:legacy-support-core-utils:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.vectordrawable:vectordrawable:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.loader:loader:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.media:media:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.viewpager:viewpager:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.coordinatorlayout:coordinatorlayout:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.drawerlayout:drawerlayout:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.customview:customview:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.swiperefreshlayout:swiperefreshlayout:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.core:core:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.versionedparcelable:versionedparcelable:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.cursoradapter:cursoradapter:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-runtime:2.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.documentfile:documentfile:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.print:print:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-viewmodel:2.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.interpolator:interpolator:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-livedata:2.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.arch.core:core-runtime:2.0.0@aar.classpath"/>
+  </path>
+  
+  <path id="imagepicker.module.classpath">
+    <path refid="${module.jdk.classpath.imagepicker}"/>
+    <pathelement location="${imagepicker.output.dir}"/>
+    <path refid="library.gradle:_androidx.collection:collection:1.0.0@jar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-common:2.0.0@jar.classpath"/>
+    <path refid="library.gradle:_androidx.arch.core:core-common:2.0.0@jar.classpath"/>
+    <path refid="library.gradle:_androidx.annotation:annotation:1.0.0@jar.classpath"/>
+    <path refid="library.gradle:_androidx.appcompat:appcompat:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.recyclerview:recyclerview:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_com.github.chrisbanes.photoview:library:1.2.4@aar.classpath"/>
+    <path refid="library.gradle:_androidx.legacy:legacy-support-v4:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.fragment:fragment:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.vectordrawable:vectordrawable-animated:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.legacy:legacy-support-core-ui:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.legacy:legacy-support-core-utils:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.vectordrawable:vectordrawable:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.loader:loader:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.media:media:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.viewpager:viewpager:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.coordinatorlayout:coordinatorlayout:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.drawerlayout:drawerlayout:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.customview:customview:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.swiperefreshlayout:swiperefreshlayout:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.core:core:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.versionedparcelable:versionedparcelable:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.cursoradapter:cursoradapter:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-runtime:2.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.documentfile:documentfile:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.print:print:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-viewmodel:2.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.interpolator:interpolator:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-livedata:2.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.arch.core:core-runtime:2.0.0@aar.classpath"/>
+  </path>
+  
+  <path id="imagepicker.runtime.module.classpath">
+    <pathelement location="${imagepicker.testoutput.dir}"/>
+    <pathelement location="${imagepicker.output.dir}"/>
+    <path refid="library.gradle:_androidx.collection:collection:1.0.0@jar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-common:2.0.0@jar.classpath"/>
+    <path refid="library.gradle:_androidx.arch.core:core-common:2.0.0@jar.classpath"/>
+    <path refid="library.gradle:_androidx.annotation:annotation:1.0.0@jar.classpath"/>
+    <path refid="library.gradle:_androidx.appcompat:appcompat:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.recyclerview:recyclerview:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_com.github.chrisbanes.photoview:library:1.2.4@aar.classpath"/>
+    <path refid="library.gradle:_androidx.legacy:legacy-support-v4:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.fragment:fragment:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.vectordrawable:vectordrawable-animated:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.legacy:legacy-support-core-ui:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.legacy:legacy-support-core-utils:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.vectordrawable:vectordrawable:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.loader:loader:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.media:media:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.viewpager:viewpager:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.coordinatorlayout:coordinatorlayout:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.drawerlayout:drawerlayout:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.customview:customview:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.swiperefreshlayout:swiperefreshlayout:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.core:core:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.versionedparcelable:versionedparcelable:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.cursoradapter:cursoradapter:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-runtime:2.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.documentfile:documentfile:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.print:print:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-viewmodel:2.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.interpolator:interpolator:1.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-livedata:2.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar.classpath"/>
+    <path refid="library.gradle:_androidx.arch.core:core-runtime:2.0.0@aar.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.imagepicker">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.imagepicker">
+    <patternset refid="excluded.from.module.imagepicker"/>
+  </patternset>
+  
+  <path id="imagepicker.module.sourcepath">
+    <dirset dir="${module.imagepicker.basedir}">
+      <include name="build/generated/source/apt/debug"/>
+      <include name="build/generated/source/buildConfig/debug"/>
+      <include name="build/generated/res/resValues/debug"/>
+      <include name="src/main/res"/>
+      <include name="src/main/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.imagepicker" depends="compile.module.imagepicker.production,compile.module.imagepicker.tests" description="Compile module imagepicker"/>
+  
+  <target name="compile.module.imagepicker.production" depends="register.custom.compilers" description="Compile module imagepicker; production classes">
+    <mkdir dir="${imagepicker.output.dir}"/>
+    <javac2 destdir="${imagepicker.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.imagepicker}/javac">
+      <compilerarg line="${compiler.args.imagepicker}"/>
+      <bootclasspath refid="imagepicker.module.bootclasspath"/>
+      <classpath refid="imagepicker.module.production.classpath"/>
+      <src refid="imagepicker.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.imagepicker"/>
+    </javac2>
+    
+    <copy todir="${imagepicker.output.dir}">
+      <fileset dir="${module.imagepicker.basedir}/build/generated/source/apt/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.imagepicker.basedir}/build/generated/source/buildConfig/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.imagepicker.basedir}/build/generated/res/resValues/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.imagepicker.basedir}/src/main/res">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.imagepicker.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.imagepicker.tests" depends="register.custom.compilers,compile.module.imagepicker.production" description="compile module imagepicker; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.imagepicker" description="cleanup module">
+    <delete dir="${imagepicker.output.dir}"/>
+    <delete dir="${imagepicker.testoutput.dir}"/>
+  </target>
+</project>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_kline_bg"
+    android:focusable="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/color_kline_bg_deep"
+        android:layout_height="wrap_content">
+
+        <com.biyoex.app.common.depth.DepthView
+            android:id="@+id/depthView"
+            android:layout_width="match_parent"
+            app:dvBuyBgCol="#1A2A2C"
+            app:dvSellBgCol="#2C1D26"
+            app:dvBuyLineCol="#58B87D"
+            app:dvSellLineCol="#D66441"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/bg_trendchar_buy"
+                android:drawablePadding="10dp"
+                android:text="@string/buy"
+                android:textColor="@color/green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:drawableRight="@drawable/bg_trendchar_sell"
+                android:drawablePadding="10dp"
+                android:text="@string/sell"
+                android:textColor="@color/price_red" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+     >
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="买盘"
+            android:textColor="@color/gray_to_black"
+            android:layout_marginStart="12dp"
+            android:textSize="10sp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/number"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/gray_to_black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingRight="20dp"
+            android:text="@string/rate"
+            android:textColor="@color/gray_to_black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="@string/rate"
+            android:textColor="@color/gray_to_black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_marginEnd="20dp"
+            android:text="@string/number"
+            android:textColor="@color/gray_to_black"
+            android:textSize="10sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="卖盘"
+            android:layout_marginEnd="12dp"
+            android:textColor="@color/gray_to_black"
+            android:textSize="10sp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_buy_trendchart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1">
+        </androidx.recyclerview.widget.RecyclerView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_sell_trendchart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="indictor_padding">2dp</dimen>
+
+    <!--夜间模式整改定义-->
+
+    <!--页面标题字体大小-->
+</resources>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.biyoex.app.common.widget.VerticalSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".home.fragment.HomeFragment"
+    tools:ignore="MissingPrefix">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="30dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="33dp">
+            <ImageView
+                android:layout_width="84dp"
+                android:src="@mipmap/home_logo"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"/>
+        </RelativeLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/vp_home_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/home_banner"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp" />
+                <include layout="@layout/item_notice" />
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/line_eee"
+                    android:layout_height="1dp"/>
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vp_main_coin"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="100dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/home_bg_color"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="6dp"
+                        android:background="@color/white"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:id="@+id/layout_rush"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/layout_bg_style_white_no_line_circular">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="13dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="核弹计划"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="总量通缩的新模式"
+                                    android:textSize="9sp" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="30dp"
+                                android:src="@mipmap/icon_home_rush" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/line_eee" />
+
+                        <RelativeLayout
+                            android:id="@+id/iv_vipbuy"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/layout_bg_style_white_no_line_circular">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="13dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="成为会员"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="享受更多抢购额度"
+                                    android:textSize="9sp" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="30dp"
+                                android:src="@mipmap/icon_homevip" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/color_gray_f3"
+                        android:layout_height="7dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rv_menu"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/color_gray_f3"
+                        android:layout_height="8dp"/>
+                </LinearLayout>
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/home_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    app:tabIndicatorColor="@color/colorWhite"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabSelectedTextColor="@color/color_home_tab"
+                    app:tabTextAppearance="@style/TabLayoutTextStyle"
+                    app:tabTextColor="@color/color_home_tab_normal" />
+
+                <com.biyoex.app.common.widget.MyViewPager
+                    android:id="@+id/home_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rv_bottom"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</com.biyoex.app.common.widget.VerticalSwipeRefreshLayout>

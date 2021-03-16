@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">klinelib</string>
+    <string name="loading">no data</string>
+    <string name="price">price</string>
+    <string name="change_rate">Quote change</string>
+    <string name="volume">volume</string>
+    <string name="open_price">Bid price</string>
+    <string name="close_price">Selling price</string>
+    <string name="high_price">Highest price</string>
+    <string name="low_price">Lowest price</string>
+    <string name="time">time</string>
+</resources>

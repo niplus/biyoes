@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+<!--    <include layout="@layout/layout_mine_header" />-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我的"
+        android:textColor="#ff333333"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:id="@+id/tv_title"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/card_mine"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"/>
+
+    <ImageView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@mipmap/user_header"
+        android:elevation="6dp"
+        app:layout_constraintTop_toTopOf="@+id/card_mine"
+        app:layout_constraintStart_toStartOf="@+id/card_mine"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="13dp"
+        android:id="@+id/iv_header"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/regist_login"
+        android:textColor="#ff333333"
+        android:textSize="14sp"
+        android:id="@+id/tv_number"
+        app:layout_constraintStart_toEndOf="@+id/iv_header"
+        app:layout_constraintTop_toTopOf="@+id/iv_header"
+        android:elevation="6dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_app"
+        android:textColor="#ff979898"
+        android:textSize="14sp"
+        android:elevation="6dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_number"
+        app:layout_constraintTop_toBottomOf="@+id/tv_number"
+        android:layout_marginTop="7dp"
+        android:id="@+id/tv_user_uid"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/card_mine"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

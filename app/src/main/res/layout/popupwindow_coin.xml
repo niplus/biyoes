@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/tradingBar"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_market_right"
+        android:layout_width="227dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:drawableLeft="@mipmap/icon_kline_select_coin"
+        android:drawablePadding="17dp"
+        android:paddingLeft="17dp"
+        android:text="@string/coin_transfer"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/market_right_tab"
+            android:layout_width="wrap_content"
+            app:tabIndicatorColor="@color/tradingBar"
+            app:tabMode="scrollable"
+            android:layout_height="30dp">
+        </com.google.android.material.tabs.TabLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edit_market_right"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="7dp"
+        android:background="@color/color_coin_poppw"
+        android:gravity="center"
+        android:hint="@string/search_hint"
+        android:maxLines="1"
+        android:textColor="@color/gray_to_black"
+        android:textColorHint="@color/gray_to_black"
+        android:textSize="10sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_market_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" />
+</LinearLayout>
